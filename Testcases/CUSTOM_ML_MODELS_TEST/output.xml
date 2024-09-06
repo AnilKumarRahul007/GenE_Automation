@@ -1,0 +1,3436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-03T20:18:58.880254" rpa="false" schemaversion="5">
+<suite id="s1" name="Safe Digging Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\CUSTOM_ML_MODELS_TEST\Safe_Digging_Testcases.robot">
+<test id="s1-t1" name="Verify Decoding" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:18:59.200041" level="INFO">Opening browser 'Chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-03T20:18:59.200041" elapsed="2.813412"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-03T20:19:02.013453" elapsed="0.035916"/>
+</kw>
+<kw name="Fill Login Form" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:02.055160" level="INFO">Typing text 'varun.datt@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:02.055160" elapsed="0.161102"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:02.216262" level="INFO">Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:02.216262" elapsed="0.097682"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-09-03T20:19:02.049369" elapsed="0.264575"/>
+</kw>
+<kw name="Click Login Button" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:02.313944" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:02.313944" elapsed="0.066831"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:05.390444" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:02.380775" elapsed="3.009669"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:02.313944" elapsed="3.076500"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${SUCCESS_URL}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-09-03T20:19:05.390444" elapsed="0.000000"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:05.400442" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard'.</msg>
+<arg>${SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-09-03T20:19:05.390444" elapsed="0.009998"/>
+</kw>
+<kw name="Click SIDEMENU" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:05.400442" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i'.</msg>
+<arg>${SIDE_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:05.400442" elapsed="0.067729"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:08.471754" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:05.468171" elapsed="3.003583"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:05.400442" elapsed="3.071312"/>
+</kw>
+<kw name="Verify all SIDEMENU OPTIONS" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIDEMENU_OPTIONS}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:08.472313" elapsed="0.008483"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:08.496349" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]' is displayed.</msg>
+<arg>${SIDEMENU_OPTIONS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:08.480796" elapsed="0.015553"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:09.510479" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:08.496349" elapsed="1.014130"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SUBCRIPTION_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:09.510479" elapsed="0.009970"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:09.538852" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]' is displayed.</msg>
+<arg>${SUBCRIPTION_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:09.521536" elapsed="0.017316"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:10.545023" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:09.539424" elapsed="1.005599"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USERIMAGE_IN_SUBCRIPTION_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:10.545023" elapsed="0.025056"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:10.605157" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[1]/img' is displayed.</msg>
+<arg>${USERIMAGE_IN_SUBCRIPTION_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:10.575129" elapsed="0.030028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:11.607196" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:10.605157" elapsed="1.002039"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USERNAME_IN_SUBCRIPTION_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:11.607196" elapsed="0.019999"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:11.655335" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[2]' is displayed.</msg>
+<arg>${USERNAME_IN_SUBCRIPTION_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:11.627195" elapsed="0.028140"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:12.666995" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:11.655335" elapsed="1.011660"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:08.472313" elapsed="4.194682"/>
+</kw>
+<kw name="Click Custom ML Models" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CUSTOM_ML_MODELS_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:12.666995" elapsed="0.013400"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:12.706767" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/a' is displayed.</msg>
+<arg>${CUSTOM_ML_MODELS_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:12.680395" elapsed="0.026372"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:13.713892" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:12.706767" elapsed="1.007125"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CUSTOM_ML_MODELS_BOX_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:13.713892" elapsed="0.033989"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:13.798019" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/a/img' is displayed.</msg>
+<arg>${CUSTOM_ML_MODELS_BOX_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:13.747881" elapsed="0.050138"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:14.808752" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:13.798019" elapsed="1.010733"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:14.808752" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${CUSTOM_ML_MODELS_BOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:14.808752" elapsed="0.066940"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:12.666995" elapsed="2.208697"/>
+</kw>
+<kw name="Click Safe Digging" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SAFE_DIGGING_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:14.875692" elapsed="0.020925"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:14.911869" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/div' is displayed.</msg>
+<arg>${SAFE_DIGGING_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:14.896617" elapsed="0.015252"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:15.912062" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:14.911869" elapsed="1.000193"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SAFE_DIGGING_BOX_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:15.912062" elapsed="0.009998"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:15.942061" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/div/ul/li/a/img' is displayed.</msg>
+<arg>${SAFE_DIGGING_BOX_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:15.922060" elapsed="0.020001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:16.942106" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:15.942061" elapsed="1.000045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:16.942106" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/div'.</msg>
+<arg>${SAFE_DIGGING_BOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:16.942106" elapsed="0.050462"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${SAFE_DIGGING_URL}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-09-03T20:19:16.992568" elapsed="0.053264"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:17.054840" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard/safe-digging'.</msg>
+<arg>${SAFE_DIGGING_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-09-03T20:19:17.045832" elapsed="0.009008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:20.055933" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:17.054840" elapsed="3.001093"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:14.875692" elapsed="5.180241"/>
+</kw>
+<kw name="Verify Drag and drop or select a PDF to Upload" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:20.055933" elapsed="0.020019"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:20.095986" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div' is displayed.</msg>
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:20.075952" elapsed="0.020034"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:21.102990" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:20.095986" elapsed="1.007004"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:21.102990" elapsed="0.011575"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:21.130741" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div/i' is displayed.</msg>
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:21.114565" elapsed="0.016176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:22.135948" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:21.130741" elapsed="1.005370"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX_TEXT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:22.136111" elapsed="0.070120"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:22.306720" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div/span' is displayed.</msg>
+<arg>${DRAG_AND_DROP_OR_SELECT_A_PDF_TO_UPLOAD_BOX_TEXT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:22.206231" elapsed="0.100489"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:23.310785" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:22.306720" elapsed="1.004207"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:20.055933" elapsed="3.254994"/>
+</kw>
+<kw name="Verify Select Company" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SELECT_COMPANY_BOX}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:23.314522" elapsed="0.029173"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:23.381023" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div' is displayed.</msg>
+<arg>${SELECT_COMPANY_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:23.343695" elapsed="0.037328"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:24.381572" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:23.381023" elapsed="1.000549"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:24.381572" elapsed="0.046084"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:24.481463" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div/div[2]' is displayed.</msg>
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:24.427656" elapsed="0.053807"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:25.485320" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:24.481463" elapsed="1.003857"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:25.488477" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div/div[2]'.</msg>
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:25.485320" elapsed="0.213047"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:26.707889" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:25.698367" elapsed="1.009522"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:26.707889" level="INFO">Clicking element 'xpath=//div[contains(text(),'SGN')]'.</msg>
+<arg>${SGN_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:26.707889" elapsed="0.206088"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:27.932594" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:26.913977" elapsed="1.018617"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:27.932594" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div/div[2]'.</msg>
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:27.932594" elapsed="0.049645"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:28.992606" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:27.982239" elapsed="1.010367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:28.995604" level="INFO">Clicking element 'xpath=//div[contains(text(),'WWU')]'.</msg>
+<arg>${WWU_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:28.993606" elapsed="0.093001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:30.100779" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:29.086607" elapsed="1.014172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:30.101764" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div/div[2]'.</msg>
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:30.100779" elapsed="0.043986"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:31.156307" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:30.145759" elapsed="1.010548"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:31.157306" level="INFO">Clicking element 'xpath=//div[contains(text(),'NGN')]'.</msg>
+<arg>${NGN_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:31.156307" elapsed="0.070534"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:32.232484" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:31.226841" elapsed="1.005643"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:32.234496" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/span/div/div/div[2]'.</msg>
+<arg>${SELECT_COMPANY_BOX_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:32.233483" elapsed="0.188881"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:33.433295" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:32.423363" elapsed="1.009932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:33.435295" level="INFO">Clicking element 'xpath=//div[contains(text(),'CadentGas')]'.</msg>
+<arg>${CADENT_GAS_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:33.434293" elapsed="0.184758"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:34.632982" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:33.620052" elapsed="1.012930"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:23.313809" elapsed="11.320179"/>
+</kw>
+<kw name="Verify Upload" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${UPLOAD_BUTTON}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:34.636997" elapsed="0.038994"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:34.730069" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[3]' is displayed.</msg>
+<arg>${UPLOAD_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:34.677003" elapsed="0.053066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:35.742659" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:34.731102" elapsed="1.011557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:35.743660" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[3]'.</msg>
+<arg>${UPLOAD_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:35.742659" elapsed="0.059157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:37.810019" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:35.801816" elapsed="2.008203"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:34.635997" elapsed="3.175018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:37.812010" elapsed="0.069009"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:37.956578" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:37.885078" elapsed="0.071500"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:37.959582" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:37.958576" elapsed="0.001006"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.045141" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:37.963582" elapsed="0.081559"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.111722" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.048161" elapsed="0.063561"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.114722" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.114722" elapsed="0.001005"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.113724" elapsed="0.002003"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.047151" elapsed="0.068576"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:38.046161" elapsed="0.069566"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:38.116717" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:37.960580" elapsed="0.156137"/>
+</kw>
+<msg time="2024-09-03T20:19:38.116717" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:37.959582" elapsed="0.157135"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.117718" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN1}</arg>
+<status status="PASS" start="2024-09-03T20:19:37.883037" elapsed="0.235678"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.150760" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.120716" elapsed="0.030044"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.151857" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.151857" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.171242" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.154078" elapsed="0.017164"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.190252" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.172247" elapsed="0.018005"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.191255" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.172247" elapsed="0.019008"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.209788" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.192254" elapsed="0.017534"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.210793" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.210793" elapsed="0.001007"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.210793" elapsed="0.001007"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.192254" elapsed="0.019546"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:38.171242" elapsed="0.040558"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:38.211800" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.152983" elapsed="0.058817"/>
+</kw>
+<msg time="2024-09-03T20:19:38.212784" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.152983" elapsed="0.059801"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.212784" elapsed="0.001020"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN2}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.119717" elapsed="0.095078"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.244784" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.216787" elapsed="0.027997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.245786" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.244784" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.265066" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.247786" elapsed="0.017280"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.283040" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.266065" elapsed="0.016975"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.284040" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.265066" elapsed="0.018974"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.306503" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.285040" elapsed="0.021463"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.307499" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.285040" elapsed="0.023458"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.344505" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.309503" elapsed="0.035002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.347493" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.347493" elapsed="0.000000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.345489" elapsed="0.003018"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.309503" elapsed="0.039004"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:38.265066" elapsed="0.083441"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:38.350500" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.247786" elapsed="0.103719"/>
+</kw>
+<msg time="2024-09-03T20:19:38.351505" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.246787" elapsed="0.104718"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.352504" elapsed="0.000999"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN3}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.215786" elapsed="0.137717"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.410067" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.359491" elapsed="0.050576"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.411085" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.411085" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.448085" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.417081" elapsed="0.031996"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.484116" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.451084" elapsed="0.033032"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.485123" elapsed="0.000983"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.450078" elapsed="0.036028"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.518468" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.487107" elapsed="0.032362"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.519469" elapsed="0.001003"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.487107" elapsed="0.034361"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.559467" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.522482" elapsed="0.036985"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.560473" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.522482" elapsed="0.040003"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.596500" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.563468" elapsed="0.033032"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.602045" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.601045" elapsed="0.001000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.597495" elapsed="0.005550"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.562485" elapsed="0.040560"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:38.449077" elapsed="0.153968"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:38.604043" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.414072" elapsed="0.190989"/>
+</kw>
+<msg time="2024-09-03T20:19:38.606047" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.412085" elapsed="0.193962"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.607049" elapsed="0.001997"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN4}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.356492" elapsed="0.252554"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.668056" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.613042" elapsed="0.055014"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.670046" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.669056" elapsed="0.001984"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.708645" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.675044" elapsed="0.033601"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.743629" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.710634" elapsed="0.032995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.744637" elapsed="0.000990"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.709633" elapsed="0.035994"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.782791" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.747622" elapsed="0.035169"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.783788" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.746624" elapsed="0.038163"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.825107" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.785783" elapsed="0.039324"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.826213" elapsed="0.002204"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.785783" elapsed="0.042634"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.864370" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.829580" elapsed="0.035785"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.866382" elapsed="0.000981"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.829580" elapsed="0.038793"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.899955" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.869364" elapsed="0.031594"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.902952" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.901953" elapsed="0.000999"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.900958" elapsed="0.001994"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:38.868373" elapsed="0.034579"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:38.708645" elapsed="0.195308"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:38.903953" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.674046" elapsed="0.230897"/>
+</kw>
+<msg time="2024-09-03T20:19:38.904943" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.672046" elapsed="0.233901"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.905947" elapsed="0.000997"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN5}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.611041" elapsed="0.296903"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:38.965943" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.910939" elapsed="0.055004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:38.967943" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.966946" elapsed="0.000997"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.006520" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.972944" elapsed="0.033576"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.043517" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.008526" elapsed="0.036010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.044536" elapsed="0.000985"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.007531" elapsed="0.038989"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.080521" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.047521" elapsed="0.033000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.081519" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.047521" elapsed="0.034998"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.119101" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.083520" elapsed="0.036584"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.120104" elapsed="0.001990"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.083520" elapsed="0.039592"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.158108" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.124097" elapsed="0.035001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.159098" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.123112" elapsed="0.037993"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.184099" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.161105" elapsed="0.022994"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.184099" elapsed="0.001018"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.161105" elapsed="0.024012"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.207647" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.186118" elapsed="0.021529"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.209650" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.209650" elapsed="0.000000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.208641" elapsed="0.001009"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.186118" elapsed="0.023532"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:39.007531" elapsed="0.203122"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:39.210653" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.969948" elapsed="0.240705"/>
+</kw>
+<msg time="2024-09-03T20:19:39.211642" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:38.968938" elapsed="0.242704"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.211642" elapsed="0.001004"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN6}</arg>
+<status status="PASS" start="2024-09-03T20:19:38.909942" elapsed="0.303699"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.252642" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.216642" elapsed="0.036000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.254647" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.253642" elapsed="0.001005"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.280657" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.257641" elapsed="0.024006"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.303226" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.282645" elapsed="0.020581"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.304256" elapsed="0.000969"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.282645" elapsed="0.022580"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.328236" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.306226" elapsed="0.022010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.329236" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.306226" elapsed="0.024010"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.356226" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.331234" elapsed="0.024992"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.357224" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.330236" elapsed="0.027988"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.382236" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.359224" elapsed="0.024013"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.383237" elapsed="0.000998"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.358224" elapsed="0.026011"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.406554" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.385261" elapsed="0.021293"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.407551" elapsed="0.001004"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.385261" elapsed="0.023294"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.424542" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.409558" elapsed="0.014984"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.424542" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.408555" elapsed="0.016986"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.439548" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.425541" elapsed="0.014007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.441543" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.440548" elapsed="0.000995"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.440548" elapsed="0.000995"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.425541" elapsed="0.016002"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:39.281647" elapsed="0.159896"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:39.442543" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.255644" elapsed="0.186899"/>
+</kw>
+<msg time="2024-09-03T20:19:39.442543" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.255644" elapsed="0.186899"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.443549" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN7}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.214644" elapsed="0.228905"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.469095" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.445541" elapsed="0.023554"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.470167" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.470103" elapsed="0.000064"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.485890" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.471276" elapsed="0.014614"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.500410" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.486882" elapsed="0.013528"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.501405" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.486882" elapsed="0.014523"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.515406" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.501405" elapsed="0.014001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.516422" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.501405" elapsed="0.015017"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.530407" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.517403" elapsed="0.013004"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.531417" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.516422" elapsed="0.014995"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.546402" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.532410" elapsed="0.013992"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.546402" elapsed="0.001012"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.532410" elapsed="0.015004"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.561404" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.547414" elapsed="0.013990"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.561404" elapsed="0.001006"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.547414" elapsed="0.014996"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.577407" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.562410" elapsed="0.014997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.577407" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.562410" elapsed="0.015998"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.592418" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.578408" elapsed="0.014010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.592418" elapsed="0.001006"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.578408" elapsed="0.015016"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.607559" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.593424" elapsed="0.015140"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.609576" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.608564" elapsed="0.001012"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.608564" elapsed="0.001012"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.593424" elapsed="0.016152"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:39.485890" elapsed="0.123686"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:39.609576" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.471175" elapsed="0.138401"/>
+</kw>
+<msg time="2024-09-03T20:19:39.609576" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.470167" elapsed="0.140421"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.610588" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN8}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.444543" elapsed="0.166045"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.655565" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.612565" elapsed="0.043996"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.657563" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.656561" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.683569" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.660576" elapsed="0.023993"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.712069" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.686593" elapsed="0.025476"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.713072" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.685592" elapsed="0.029480"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.741074" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.716071" elapsed="0.025003"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.741074" elapsed="0.001004"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.715072" elapsed="0.027006"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.768065" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.743083" elapsed="0.024982"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.769064" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.743083" elapsed="0.026982"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.794088" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.771075" elapsed="0.023013"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.795086" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.770065" elapsed="0.025021"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.820625" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.796088" elapsed="0.024537"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.821616" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.796088" elapsed="0.026530"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.844615" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.822618" elapsed="0.021997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.845613" elapsed="0.001002"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.822618" elapsed="0.023997"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.869630" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.847613" elapsed="0.022017"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.870628" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.846615" elapsed="0.025013"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.894657" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.872629" elapsed="0.023055"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.895684" elapsed="0.000977"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.872629" elapsed="0.024032"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.920161" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.897663" elapsed="0.023495"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.922160" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.922160" elapsed="0.000999"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.921158" elapsed="0.002001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.896661" elapsed="0.026498"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:39.685592" elapsed="0.237567"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:39.923159" elapsed="0.000999"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.659566" elapsed="0.264592"/>
+</kw>
+<msg time="2024-09-03T20:19:39.924158" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.658566" elapsed="0.265592"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.925159" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN9}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.611560" elapsed="0.313599"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.966145" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.928156" elapsed="0.037989"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:39.967145" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.967145" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:39.992179" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.970145" elapsed="0.022034"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.017027" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.994195" elapsed="0.022832"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.017027" elapsed="0.001184"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:39.993179" elapsed="0.025032"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.040986" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.019396" elapsed="0.021590"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.042117" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.019242" elapsed="0.022875"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.064986" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.043263" elapsed="0.022721"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.065984" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.043263" elapsed="0.023720"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.091018" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.067984" elapsed="0.023034"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.092011" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.066983" elapsed="0.026031"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.116559" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.093014" elapsed="0.023545"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.117559" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.093014" elapsed="0.025546"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.142552" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.119558" elapsed="0.022994"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.142552" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.119558" elapsed="0.023993"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.166569" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.144551" elapsed="0.022018"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.167555" elapsed="0.001004"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.144551" elapsed="0.024008"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.192588" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.169558" elapsed="0.023030"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.193586" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.168559" elapsed="0.026027"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.217133" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.194586" elapsed="0.023546"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.218132" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.194586" elapsed="0.024546"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.243130" level="INFO">${column_text} = Critical Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.220132" elapsed="0.022998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.245134" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.245134" elapsed="0.000000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.244124" elapsed="0.001010"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.112")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.220132" elapsed="0.026009"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:39.993179" elapsed="0.252962"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:40.246141" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.969148" elapsed="0.276993"/>
+</kw>
+<msg time="2024-09-03T20:19:40.247124" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:39.968146" elapsed="0.278978"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.247124" elapsed="0.001020"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN10}</arg>
+<status status="PASS" start="2024-09-03T20:19:39.927152" elapsed="0.320992"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.289147" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.251122" elapsed="0.038025"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.290150" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.289147" elapsed="0.001003"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.314703" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.293142" elapsed="0.021561"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.338690" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.315701" elapsed="0.022989"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.339701" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.315701" elapsed="0.024985"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.363711" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.340686" elapsed="0.023025"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.364722" elapsed="0.000980"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.340686" elapsed="0.025016"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.390722" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.366702" elapsed="0.025019"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.391721" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.365702" elapsed="0.027019"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.417261" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.393722" elapsed="0.023539"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.417261" elapsed="0.001095"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.392721" elapsed="0.025635"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.442814" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.419476" elapsed="0.023338"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.442814" elapsed="0.001155"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.418356" elapsed="0.025613"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.467407" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.445123" elapsed="0.022284"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.467407" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.443969" elapsed="0.024438"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.491426" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.469398" elapsed="0.022028"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.492433" elapsed="0.000994"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.469398" elapsed="0.024029"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.515774" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.494427" elapsed="0.021347"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.516771" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.493427" elapsed="0.024344"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.540764" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.517771" elapsed="0.023992"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.541763" elapsed="0.001010"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.517771" elapsed="0.025002"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.564766" level="INFO">${column_text} = Critical Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.543764" elapsed="0.021002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.566286" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.112")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.542773" elapsed="0.023513"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.585266" level="INFO">${column_text} = Warning Indicator</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.567416" elapsed="0.018861"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.587479" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.587417" elapsed="0.000062"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.586402" elapsed="0.001077"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.113")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.567416" elapsed="0.020063"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:40.314703" elapsed="0.272776"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:40.587479" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.291148" elapsed="0.297470"/>
+</kw>
+<msg time="2024-09-03T20:19:40.588618" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.291148" elapsed="0.297470"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.588618" elapsed="0.001036"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN11}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.250122" elapsed="0.339598"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.621219" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.591961" elapsed="0.029258"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.622213" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.621219" elapsed="0.000994"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.640220" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.624220" elapsed="0.016000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.659213" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.642216" elapsed="0.016997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.659213" elapsed="0.001008"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.641213" elapsed="0.019008"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.678217" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.660221" elapsed="0.017996"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.679210" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.660221" elapsed="0.019990"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.696229" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.680211" elapsed="0.016018"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.696229" elapsed="0.001006"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.680211" elapsed="0.017024"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.713761" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.697235" elapsed="0.016526"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.714760" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.697235" elapsed="0.017525"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.732767" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.715767" elapsed="0.017000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.732767" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.715767" elapsed="0.018000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.751766" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.734767" elapsed="0.016999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.751766" elapsed="0.000994"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.733767" elapsed="0.018993"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.770768" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.753761" elapsed="0.017007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.770768" elapsed="0.000998"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.753761" elapsed="0.018005"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.790776" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.772767" elapsed="0.018009"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.791810" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.772767" elapsed="0.019043"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.811829" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.792783" elapsed="0.019046"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.811829" elapsed="0.001011"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.792783" elapsed="0.020057"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.830824" level="INFO">${column_text} = Critical Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.813829" elapsed="0.016995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.831835" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.112")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.812840" elapsed="0.019990"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.850827" level="INFO">${column_text} = Warning Indicator</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.832830" elapsed="0.017997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.851836" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.113")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.832830" elapsed="0.019006"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.869828" level="INFO">${column_text} = Warning Message</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.852829" elapsed="0.016999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.870829" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.870829" elapsed="0.000000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.869828" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.114")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.852829" elapsed="0.018000"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:40.641213" elapsed="0.230622"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:40.871835" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.623213" elapsed="0.248622"/>
+</kw>
+<msg time="2024-09-03T20:19:40.871835" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.622213" elapsed="0.249622"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.872835" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN12}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.590818" elapsed="0.282017"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.904400" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.874827" elapsed="0.029573"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:40.905390" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.905390" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.925381" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.907388" elapsed="0.017993"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.944393" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.926383" elapsed="0.018010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.944393" elapsed="0.000993"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.925381" elapsed="0.020005"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.963300" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.946391" elapsed="0.016909"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.964384" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.946391" elapsed="0.017993"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:40.983420" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.965471" elapsed="0.017949"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.983420" elapsed="0.001146"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.965471" elapsed="0.019095"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.000910" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.984566" elapsed="0.017358"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.001924" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:40.984566" elapsed="0.018358"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.019930" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.002924" elapsed="0.017006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.020932" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.002924" elapsed="0.018008"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.034920" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.021946" elapsed="0.012974"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.035919" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.021946" elapsed="0.013973"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.047919" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.035919" elapsed="0.012000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.048919" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.035919" elapsed="0.013000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.061919" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.049919" elapsed="0.012000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.061919" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.048919" elapsed="0.014001"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.074926" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.062920" elapsed="0.012006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.074926" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.062920" elapsed="0.013006"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.088935" level="INFO">${column_text} = Critical Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.075926" elapsed="0.013009"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.088935" elapsed="0.001001"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.112")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.075926" elapsed="0.014010"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.102447" level="INFO">${column_text} = Warning Indicator</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.089936" elapsed="0.012511"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.102447" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.113")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.089936" elapsed="0.013511"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.116454" level="INFO">${column_text} = Warning Message</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.104452" elapsed="0.012002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.116454" elapsed="0.001000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.114")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.103447" elapsed="0.014007"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.128451" level="INFO">${column_text} = Created Date</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.117454" elapsed="0.010997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:41.128451" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.128451" elapsed="0.000999"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.128451" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.115")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.117454" elapsed="0.011996"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:40.925381" elapsed="0.204069"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:41.129450" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.906388" elapsed="0.223062"/>
+</kw>
+<msg time="2024-09-03T20:19:41.129450" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:40.906388" elapsed="0.223062"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.129450" elapsed="0.000000"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN13}</arg>
+<status status="PASS" start="2024-09-03T20:19:40.873832" elapsed="0.256618"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.146448" level="INFO">${header_row} = &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-pr...</msg>
+<var>${header_row}</var>
+<arg>${table_locator}//tr[1]</arg>
+<arg>outerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.130450" elapsed="0.015998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-03T20:19:41.146448" level="INFO">Header Row: &lt;tr&gt;&lt;th class="style-prymary"&gt;  Job Reference&lt;/th&gt;&lt;th class="style-prymary"&gt;  Utility Provider&lt;/th&gt;&lt;th class="style-prymary"&gt; Red Line&lt;/th&gt;&lt;th class="style-prymary"&gt;  Blue Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Green Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Orange Line&lt;/th&gt;&lt;th class="style-prymary"&gt;Job Ready for Release&lt;/th&gt;&lt;th class="style-prymary"&gt; Image Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Validation&lt;/th&gt;&lt;th class="style-prymary"&gt; Critical Line&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Indicator&lt;/th&gt;&lt;th class="style-prymary"&gt; Warning Message&lt;/th&gt;&lt;th class="style-prymary"&gt; Created Date&lt;/th&gt;&lt;th class="style-prymary"&gt; Modified Date&lt;/th&gt;&lt;/tr&gt;</msg>
+<arg>Header Row: ${header_row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.146448" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Column Exists" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.157450" level="INFO">${column_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;, &lt;selenium.webdri...</msg>
+<var>${column_list}</var>
+<arg>${table_locator}//tr[1]//th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.147448" elapsed="0.010002"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.166445" level="INFO">${column_text} = Job Reference</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.157450" elapsed="0.008995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.167450" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.104")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.157450" elapsed="0.010000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.177451" level="INFO">${column_text} = Utility Provider</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.167450" elapsed="0.010001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.177451" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.105")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.167450" elapsed="0.010001"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.187457" level="INFO">${column_text} = Red Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.178450" elapsed="0.009007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.187457" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.106")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.178450" elapsed="0.009007"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.198457" level="INFO">${column_text} = Blue Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.188457" elapsed="0.010000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.198457" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.93")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.188457" elapsed="0.010000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.208983" level="INFO">${column_text} = Green Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.199457" elapsed="0.009526"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.208983" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.107")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.199457" elapsed="0.009526"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.218973" level="INFO">${column_text} = Orange Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.208983" elapsed="0.009990"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.218973" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.108")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.208983" elapsed="0.010992"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.230972" level="INFO">${column_text} = Job Ready for Release</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.219975" elapsed="0.010997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.230972" elapsed="0.001002"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.109")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.219975" elapsed="0.011999"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.241971" level="INFO">${column_text} = Image Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.231974" elapsed="0.009997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.241971" elapsed="0.001002"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.110")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.231974" elapsed="0.010999"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.252975" level="INFO">${column_text} = Warning Validation</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.242973" elapsed="0.010002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.252975" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.111")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.242973" elapsed="0.010002"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.263696" level="INFO">${column_text} = Critical Line</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.252975" elapsed="0.010721"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.264764" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.112")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.252975" elapsed="0.011789"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.274362" level="INFO">${column_text} = Warning Indicator</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.264764" elapsed="0.009598"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.274362" elapsed="0.001024"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.113")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.264764" elapsed="0.010622"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.285048" level="INFO">${column_text} = Warning Message</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.275386" elapsed="0.009662"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.286175" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.114")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.275386" elapsed="0.010789"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.297765" level="INFO">${column_text} = Created Date</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.286175" elapsed="0.011590"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.297765" elapsed="0.000000"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.115")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.286175" elapsed="0.011590"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.308273" level="INFO">${column_text} = Modified Date</msg>
+<var>${column_text}</var>
+<arg>${column}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.298757" elapsed="0.009516"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-09-03T20:19:41.309272" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>True</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.309272" elapsed="0.000000"/>
+</kw>
+<arg>'${column_text}' == '${expected_column}'</arg>
+<arg>Return From Keyword</arg>
+<arg>True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.308273" elapsed="0.000999"/>
+</kw>
+<var name="${column}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b83190d9316092d44f9aaf718eeb804c", element="f.D74011B4FB1E1C3C3C32637AC532722E.d.E92B1D4359076835ACDAEF1465E8CE5C.e.116")&gt;</var>
+<status status="PASS" start="2024-09-03T20:19:41.298757" elapsed="0.010515"/>
+</iter>
+<var>${column}</var>
+<value>@{column_list}</value>
+<status status="PASS" start="2024-09-03T20:19:41.157450" elapsed="0.151822"/>
+</for>
+<return>
+<value>False</value>
+<status status="NOT RUN" start="2024-09-03T20:19:41.309272" elapsed="0.000000"/>
+</return>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<status status="PASS" start="2024-09-03T20:19:41.147448" elapsed="0.161824"/>
+</kw>
+<msg time="2024-09-03T20:19:41.309272" level="INFO">${column_present} = True</msg>
+<var>${column_present}</var>
+<arg>Check Column Exists</arg>
+<arg>${table_locator}</arg>
+<arg>${expected_column}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.146448" elapsed="0.162824"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${column_present}'=='False'</arg>
+<arg>Fail</arg>
+<arg>Column '${expected_column}' not found in the table</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.309272" elapsed="0.001001"/>
+</kw>
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN14}</arg>
+<status status="PASS" start="2024-09-03T20:19:41.130450" elapsed="0.179823"/>
+</kw>
+<kw name="Verify Left Arrow and Right Arrow and Page Number" owner="Custom_ML_Models_SafeDigging_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LEFT_ARROW}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.311273" elapsed="0.011998"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:41.343271" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[1]/a' is displayed.</msg>
+<arg>${LEFT_ARROW}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.323271" elapsed="0.020000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:42.344791" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:41.343271" elapsed="1.001520"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:42.346794" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[1]/a'.</msg>
+<arg>${LEFT_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:42.345793" elapsed="0.091494"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:44.440320" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:42.437287" elapsed="2.003033"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${RIGHT_ARROW}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:44.441323" elapsed="0.032002"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:44.509855" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[3]/a' is displayed.</msg>
+<arg>${RIGHT_ARROW}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:44.473325" elapsed="0.036530"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:45.526368" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:44.509855" elapsed="1.016513"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:45.526368" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[3]/a'.</msg>
+<arg>${RIGHT_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T20:19:45.526368" elapsed="0.055232"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:47.589207" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:45.581600" elapsed="2.008613"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PAGE_NUMBER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T20:19:47.591221" elapsed="0.054562"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:47.699785" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[2]/a' is displayed.</msg>
+<arg>${PAGE_NUMBER}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T20:19:47.646778" elapsed="0.053007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T20:19:48.709482" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T20:19:47.700786" elapsed="1.008696"/>
+</kw>
+<status status="PASS" start="2024-09-03T20:19:41.310273" elapsed="7.399209"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-09-03T20:19:48.712214" level="INFO">Executing JavaScript:
+return arguments[0].scrollWidth;xpath=//div[@class='chat-box-section mt-60 table-container']
+Without any arguments.</msg>
+<msg time="2024-09-03T20:19:48.840559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-03T20:19:48.840559" level="FAIL">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=128.0.6613.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60EDAB5D2+29090]
+	(No symbol) [0x00007FF60ED1E689]
+	(No symbol) [0x00007FF60EBDB1CA]
+	(No symbol) [0x00007FF60EBE1CD3]
+	(No symbol) [0x00007FF60EBE4398]
+	(No symbol) [0x00007FF60EC7775C]
+	(No symbol) [0x00007FF60EC566EA]
+	(No symbol) [0x00007FF60EC765D9]
+	(No symbol) [0x00007FF60EC56493]
+	(No symbol) [0x00007FF60EC209B1]
+	(No symbol) [0x00007FF60EC21B11]
+	GetHandleVerifier [0x00007FF60F0C8C5D+3295277]
+	GetHandleVerifier [0x00007FF60F114843+3605523]
+	GetHandleVerifier [0x00007FF60F10A707+3564247]
+	GetHandleVerifier [0x00007FF60EE66EB6+797318]
+	(No symbol) [0x00007FF60ED2980F]
+	(No symbol) [0x00007FF60ED253F4]
+	(No symbol) [0x00007FF60ED25580]
+	(No symbol) [0x00007FF60ED14A1F]
+	BaseThreadInitThunk [0x00007FF929A7257D+29]
+	RtlUserThreadStart [0x00007FF92B4CAF28+40]
+</msg>
+<var>${scroll_width}</var>
+<arg>return arguments[0].scrollWidth;</arg>
+<arg>${SCROLL_BAR}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="FAIL" start="2024-09-03T20:19:48.710500" elapsed="0.130059">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=128.0.6613.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60EDAB5D2+29090]
+	(No symbol) [0x00007FF60ED1E689]
+	(No symbol) [0x00007FF60EBDB1CA]
+	(No symbol) [0x00007FF60EBE1CD3]
+	(No symbol) [0x00007FF60EBE4398]
+	(No symbol) [0x00007FF60EC7775C]
+	(No symbol) [0x00007FF60EC566EA]
+	(No symbol) [0x00007FF60EC765D9]
+	(No symbol) [0x00007FF60EC56493]
+	(No symbol) [0x00007FF60EC209B1]
+	(No symbol) [0x00007FF60EC21B11]
+	GetHandleVerifier [0x00007FF60F0C8C5D+3295277]
+	GetHandleVerifier [0x00007FF60F114843+3605523]
+	GetHandleVerifier [0x00007FF60F10A707+3564247]
+	GetHandleVerifier [0x00007FF60EE66EB6+797318]
+	(No symbol) [0x00007FF60ED2980F]
+	(No symbol) [0x00007FF60ED253F4]
+	(No symbol) [0x00007FF60ED25580]
+	(No symbol) [0x00007FF60ED14A1F]
+	BaseThreadInitThunk [0x00007FF929A7257D+29]
+	RtlUserThreadStart [0x00007FF92B4CAF28+40]
+</status>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<var>${client_width}</var>
+<arg>return arguments[0].clientWidth;</arg>
+<arg>${SCROLL_BAR}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-09-03T20:19:48.840559" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>arguments[0].scrollLeft = arguments[0].scrollWidth;</arg>
+<arg>${SCROLL_BAR}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-09-03T20:19:48.840559" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-03T20:19:48.850560" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-09-03T20:19:48.850560" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-03T20:18:59.200041" elapsed="49.650519">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=128.0.6613.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60EDAB5D2+29090]
+	(No symbol) [0x00007FF60ED1E689]
+	(No symbol) [0x00007FF60EBDB1CA]
+	(No symbol) [0x00007FF60EBE1CD3]
+	(No symbol) [0x00007FF60EBE4398]
+	(No symbol) [0x00007FF60EC7775C]
+	(No symbol) [0x00007FF60EC566EA]
+	(No symbol) [0x00007FF60EC765D9]
+	(No symbol) [0x00007FF60EC56493]
+	(No symbol) [0x00007FF60EC209B1]
+	(No symbol) [0x00007FF60EC21B11]
+	GetHandleVerifier [0x00007FF60F0C8C5D+3295277]
+	GetHandleVerifier [0x00007FF60F114843+3605523]
+	GetHandleVerifier [0x00007FF60F10A707+3564247]
+	GetHandleVerifier [0x00007FF60EE66EB6+797318]
+	(No symbol) [0x00007FF60ED2980F]
+	(No symbol) [0x00007FF60ED253F4]
+	(No symbol) [0x00007FF60ED25580]
+	(No symbol) [0x00007FF60ED14A1F]
+	BaseThreadInitThunk [0x00007FF929A7257D+29]
+	RtlUserThreadStart [0x00007FF92B4CAF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-09-03T20:18:58.880254" elapsed="49.970306"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Safe Digging Testcases">Safe Digging Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-03T20:18:59.190038" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 115: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-02T17:59:50.181527" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Forgotpassword Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Forgotpassword_Testcases.robot">
+<test id="s1-s1-t1" name="VERIFY FORGOT PASSWORD FUNCTIONALITY" line="9">
+<kw name="Forgot Password Link" owner="Forgotpassword_Keywords" type="SETUP">
+<kw name="Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-02T17:59:50.894582" level="INFO">Opening browser 'chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-02T17:59:50.894582" elapsed="6.978683"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-02T17:59:57.874264" elapsed="0.222513"/>
+</kw>
+<kw name="Verify Gen E Logo Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGO_LOCATOR}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T17:59:58.099781" elapsed="0.028538"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T17:59:58.251858" level="INFO">Element 'xpath=/html/body/main/div/div/div/div[1]/div/div[1]/img' is displayed.</msg>
+<arg>${LOGO_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T17:59:58.128319" elapsed="0.123539"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:00.257163" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T17:59:58.251858" elapsed="2.005305"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:58.098776" elapsed="2.158387"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:50.894582" elapsed="9.362581"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:00.257163" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[3]/a/span'.</msg>
+<arg>${FORGOT_PASSWORD_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:00.257163" elapsed="0.876241"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${EMAIL_VERIFY_PAGE_URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-09-02T18:00:01.133404" elapsed="0.164851"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:50.894582" elapsed="10.403673"/>
+</kw>
+<kw name="Click Forgot Password Link" owner="Forgotpassword_Keywords">
+<kw name="Verify GenE Logo In Forgot Password Page" owner="Forgotpassword_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${GENE_LOGO_PRESENCE}</arg>
+<arg>timeout=4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:01.305782" elapsed="0.486295"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:02.180930" level="INFO">Element 'xpath=//img[@alt='sign-up logo']' is displayed.</msg>
+<arg>${GENE_LOGO_PRESENCE}</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:01.792077" elapsed="0.388853"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:04.198946" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:02.189286" elapsed="2.009660"/>
+</kw>
+<status status="PASS" start="2024-09-02T18:00:01.305372" elapsed="2.893574"/>
+</kw>
+<kw name="Verify 'Email Verify' In Forgot Password Page" owner="Forgotpassword_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_VERIFY_PRESENCE}</arg>
+<arg>timeout=4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.198946" elapsed="0.331781"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.927056" level="INFO">Element 'xpath=//div[normalize-space()='Email Verify']' is displayed.</msg>
+<arg>${EMAIL_VERIFY_PRESENCE}</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.531739" elapsed="0.395317"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:06.942802" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.928069" elapsed="2.019731"/>
+</kw>
+<status status="PASS" start="2024-09-02T18:00:04.198946" elapsed="2.748854"/>
+</kw>
+<kw name="Verify Email Logo In Forgot Password Page" owner="Forgotpassword_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_LOGO_IN_FORGOT_PASSWORD}</arg>
+<arg>timeout=4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:06.947800" elapsed="0.126594"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:07.306796" level="INFO">Element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']' is displayed.</msg>
+<arg>${EMAIL_LOGO_IN_FORGOT_PASSWORD}</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.075394" elapsed="0.231402"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:09.348188" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.306796" elapsed="2.088532"/>
+</kw>
+<status status="PASS" start="2024-09-02T18:00:06.947800" elapsed="2.454315"/>
+</kw>
+<kw name="Verify 'Enter Email Address' In Forgot Password Page" owner="Forgotpassword_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_ADDRESS_IN_FORGOT_PASSWORD_PAGE}</arg>
+<arg>timeout=4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:09.406837" elapsed="0.904726"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:12.355712" level="INFO">Element 'xpath=//input[@placeholder='Enter email address']' is displayed.</msg>
+<arg>${EMAIL_ADDRESS_IN_FORGOT_PASSWORD_PAGE}</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:10.312563" elapsed="2.043149"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:14.423708" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:12.355712" elapsed="2.067996"/>
+</kw>
+<status status="PASS" start="2024-09-02T18:00:09.406837" elapsed="5.016871"/>
+</kw>
+<kw name="Verify 'Send Reset Link' In Forgot Password Page" owner="Forgotpassword_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEND_REST_LINK_IN_FORGOT_PASSWORD}</arg>
+<arg>timeout=4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:14.423708" elapsed="1.080550"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:18.842462" level="INFO">Element 'xpath=//button[normalize-space()='Send Reset Link']' is displayed.</msg>
+<arg>${SEND_REST_LINK_IN_FORGOT_PASSWORD}</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:15.505258" elapsed="3.337204"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:20.855194" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:18.842462" elapsed="2.012732"/>
+</kw>
+<status status="PASS" start="2024-09-02T18:00:14.423708" elapsed="6.431486"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:20.857193" level="INFO">Typing text 'anil.kumar@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[3]/div/form/div/input'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:20.856196" elapsed="1.913243"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:22.770439" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[3]/div/form/button'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:22.770439" elapsed="1.564092"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:26.343790" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:24.335531" elapsed="2.008259"/>
+</kw>
+<arg>anil.kumar@dtskill.com</arg>
+<status status="PASS" start="2024-09-02T18:00:01.298255" elapsed="25.046533"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-02T18:00:26.344788" elapsed="7.094515"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:50.894582" elapsed="42.544721"/>
+</test>
+<status status="PASS" start="2024-09-02T17:59:50.261572" elapsed="43.179728"/>
+</suite>
+<status status="PASS" start="2024-09-02T17:59:50.201528" elapsed="43.243309"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Forgotpassword Testcases">Suites.Forgotpassword Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-02T17:59:50.874581" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Forgotpassword_Keywords.robot' on line 3: Resource file '..\..\Keywords\Loginpage_Keywords.robot' does not exist.</msg>
+</errors>
+</robot>

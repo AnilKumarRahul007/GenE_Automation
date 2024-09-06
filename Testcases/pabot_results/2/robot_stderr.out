@@ -1,0 +1,10 @@
+[ ERROR ] Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Settings\settings.robot' on line 3: Processing variable file '../Variables' failed: Importing variable file '../Variables' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages

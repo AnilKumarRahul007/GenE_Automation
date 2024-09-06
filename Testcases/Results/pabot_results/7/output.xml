@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-02T17:59:50.221558" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="SignUpPage Testcase" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\SignUpPage_Testcase.robot">
+<test id="s1-s1-t1" name="Combined Test Cases for Sign-Up Page" line="8">
+<kw name="Open Sign Up Page" owner="SignUpPage_Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-02T17:59:50.924634" level="INFO">Opening browser 'chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-02T17:59:50.924634" elapsed="8.788545"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-02T17:59:59.713887" elapsed="0.493231"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:00.217121" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[2]/div/a/span'.</msg>
+<arg>${SIGN_UP_LINK_LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:00.207118" elapsed="0.263500"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${SIGN_UP_PAGE_URL}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-09-02T18:00:00.470618" elapsed="0.231564"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:50.914609" elapsed="9.787573"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:03.702258" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:00.702182" elapsed="3.000076"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:03.758740" level="INFO">Current page contains element 'xpath=//img[@alt='sign-up logo']'.</msg>
+<arg>${GENE_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:03.703258" elapsed="0.055482"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:03.884952" level="INFO">Current page contains element 'xpath=//i[@class='feather-user']'.</msg>
+<arg>${ENTER_YOUR_NAME_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:03.758740" elapsed="0.127213"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:03.998996" level="INFO">Current page contains element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>${NAME_INPUT_LOCATOR}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:03.885953" elapsed="0.113043"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.099007" level="INFO">Current page contains element 'xpath=//i[@class='feather-briefcase']'.</msg>
+<arg>${BRIEFCASE_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:03.998996" elapsed="0.100011"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.207311" level="INFO">Current page contains element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']'.</msg>
+<arg>${EMAIL_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.099007" elapsed="0.109317"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.605766" level="INFO">Current page contains element 'xpath=//div[4]//div[1]//i[1]'.</msg>
+<arg>${LOCK_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.208324" elapsed="0.397442"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.792697" level="INFO">Current page contains element 'xpath=//div[4]//div[1]//i[1]'.</msg>
+<arg>${CONFIRM_PASSWORD_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.615776" elapsed="0.177937"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:04.912281" level="INFO">Current page contains element 'xpath=//div[@class='forget-text']'.</msg>
+<arg>${FORGOT_PASSWORD_PRESENCE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.793713" elapsed="0.118632"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:05.038876" level="INFO">Current page contains element 'xpath=//button[normalize-space()='Sign Up']'.</msg>
+<arg>${SIGN_UP_BUTTON_PRESENCE_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:04.912345" elapsed="0.126531"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:05.072084" level="INFO">Current page contains element 'xpath=//span[normalize-space()='Sign In']'.</msg>
+<arg>${SIGN_IN_PRESENCE_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:05.038876" elapsed="0.033208"/>
+</kw>
+<kw name="Fill Sign Up Form" owner="SignUpPage_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:05.072084" level="INFO">Typing text 'Anil' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>${NAME_INPUT_LOCATOR}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:05.072084" elapsed="0.467881"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:05.539965" level="INFO">Typing text 'anil.kumar@dtskill.com' into text field 'xpath=//input[@placeholder='Enter email address']'.</msg>
+<arg>${EMAIL_INPUT_LOCATOR_IN_SIGNUP}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:05.539965" elapsed="0.807609"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:06.347574" level="INFO">Typing text '123456' into text field 'xpath=//input[@placeholder='Create Password']'.</msg>
+<arg>${CREATE_PASSWORD_IN_SIGNUP}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:06.347574" elapsed="0.822156"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:07.171959" level="INFO">Typing text '123456' into text field 'xpath=//input[@placeholder='Confirm Password']'.</msg>
+<arg>${CONFIRM_PASSWORD_IN_SIGNUP}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.169730" elapsed="0.131021"/>
+</kw>
+<arg>Anil</arg>
+<arg>anil.kumar@dtskill.com</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<status status="PASS" start="2024-09-02T18:00:05.072084" elapsed="2.228667"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:07.320643" level="INFO">Current page contains element 'xpath=//*[@class='css-8mmkcg']'.</msg>
+<arg>${ORG_DROPDOWN_LOCATOR}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.300751" elapsed="0.019892"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORG_ARROW_LOCATOR}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.321979" elapsed="0.028437"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:07.350416" level="INFO">Clicking element 'xpath=//*[@class='css-8mmkcg']'.</msg>
+<arg>${ORG_ARROW_LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.350416" elapsed="0.126038"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:09.504029" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:07.477453" elapsed="2.026576"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-02T18:00:09.504029" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
+<arg>${SIGN_UP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-02T18:00:09.504029" elapsed="6.707937"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-02T18:00:19.253609" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-02T18:00:16.211966" elapsed="3.041643"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-02T18:00:19.254604" elapsed="14.397284"/>
+</kw>
+<status status="PASS" start="2024-09-02T17:59:50.914609" elapsed="42.737279"/>
+</test>
+<status status="PASS" start="2024-09-02T17:59:50.311572" elapsed="43.342319"/>
+</suite>
+<status status="PASS" start="2024-09-02T17:59:50.251573" elapsed="43.404318"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SignUpPage Testcase">Suites.SignUpPage Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

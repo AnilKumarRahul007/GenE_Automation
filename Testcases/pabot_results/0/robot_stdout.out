@@ -1,0 +1,33 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.FORGOT PASSWORD TEST                                                   
+==============================================================================
+Suites.FORGOT PASSWORD TEST.Forgotpassword Testcases                          
+==============================================================================
+VERIFY FORGOT PASSWORD FUNCTIONALITY                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Forgotpassword_Testcases.robot:8
+    T:  VERIFY FORGOT PASSWORD FUNCTIONALITY    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Forgotpassword_Testcases.robot:9
+      Forgot Password Link    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Forgotpassword_Keywords.robot:9
+      Login Page    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+No keyword with name 'Login Page' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?
+------------------------------------------------------------------------------
+Suites.FORGOT PASSWORD TEST.Forgotpassword Testcases                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites.FORGOT PASSWORD TEST                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\pabot_results\0\output.xml

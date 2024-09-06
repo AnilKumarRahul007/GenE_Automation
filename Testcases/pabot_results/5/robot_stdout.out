@@ -1,0 +1,19 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.SIGNUP PAGE TEST                                                       
+==============================================================================
+Suites.SIGNUP PAGE TEST.Negative SignUp Page Testcases                        
+==============================================================================
+Checking Negative Cases                                               | PASS |
+------------------------------------------------------------------------------
+Suites.SIGNUP PAGE TEST.Negative SignUp Page Testcases                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites.SIGNUP PAGE TEST                                               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\pabot_results\5\output.xml

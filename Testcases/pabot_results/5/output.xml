@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-08-26T19:59:36.273512" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="SIGNUP PAGE TEST" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\SIGNUP_PAGE_TEST">
+<suite id="s1-s1-s1" name="Negative SignUp Page Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot">
+<test id="s1-s1-s1-t1" name="Checking Negative Cases" line="7">
+<kw name="Open Sign Up Page" owner="SignUpPage_Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:36.943666" level="INFO">Opening browser 'chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T19:59:36.943666" elapsed="12.270829"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-26T19:59:49.215497" elapsed="0.127975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:49.345485" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[2]/div/a/span'.</msg>
+<arg>${SIGN_UP_LINK_LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:49.343571" elapsed="0.166030"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${SIGN_UP_PAGE_URL}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-08-26T19:59:49.509601" elapsed="0.046210"/>
+</kw>
+<status status="PASS" start="2024-08-26T19:59:36.938593" elapsed="12.617218"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T19:59:52.568522" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T19:59:49.556819" elapsed="3.011703"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.584099" level="INFO">Current page contains element 'xpath=//img[@alt='sign-up logo']'.</msg>
+<arg>${GENE_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.569528" elapsed="0.014571"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.598652" level="INFO">Current page contains element 'xpath=//i[@class='feather-user']'.</msg>
+<arg>${ENTER_YOUR_NAME_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.584099" elapsed="0.014553"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.613687" level="INFO">Current page contains element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>${NAME_INPUT_LOCATOR}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.598652" elapsed="0.015035"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.631231" level="INFO">Current page contains element 'xpath=//i[@class='feather-briefcase']'.</msg>
+<arg>${BRIEFCASE_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.614698" elapsed="0.017536"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.649796" level="INFO">Current page contains element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']'.</msg>
+<arg>${EMAIL_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.633233" elapsed="0.016563"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.665849" level="INFO">Current page contains element 'xpath=//div[4]//div[1]//i[1]'.</msg>
+<arg>${LOCK_LOGO_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.649796" elapsed="0.016053"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.676374" level="INFO">Current page contains element 'xpath=//div[4]//div[1]//i[1]'.</msg>
+<arg>${CONFIRM_PASSWORD_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.666847" elapsed="0.009527"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.693403" level="INFO">Current page contains element 'xpath=//div[@class='forget-text']'.</msg>
+<arg>${FORGOT_PASSWORD_PRESENCE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.676374" elapsed="0.017029"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.707939" level="INFO">Current page contains element 'xpath=//button[normalize-space()='Sign Up']'.</msg>
+<arg>${SIGN_UP_BUTTON_PRESENCE_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.694412" elapsed="0.013527"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.720459" level="INFO">Current page contains element 'xpath=//span[normalize-space()='Sign In']'.</msg>
+<arg>${SIGN_IN_PRESENCE_IN_SIGNUP}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.707939" elapsed="0.012520"/>
+</kw>
+<kw name="Wrong Fill Sign Up Form" owner="SignUpPage_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.722458" level="INFO">Typing text '98ujkas0^' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>${NAME_INPUT_LOCATOR}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.722458" elapsed="0.126998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:52.851458" level="INFO">Typing text 'alskdjaslk@.com' into text field 'xpath=//input[@placeholder='Enter email address']'.</msg>
+<arg>${EMAIL_INPUT_LOCATOR_IN_SIGNUP}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:52.850458" elapsed="0.195894"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:53.047351" level="INFO">Typing text '&amp;^%$(*' into text field 'xpath=//input[@placeholder='Create Password']'.</msg>
+<arg>${CREATE_PASSWORD_IN_SIGNUP}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:53.047351" elapsed="0.265135"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:53.313993" level="INFO">Typing text '&amp;^%$(*' into text field 'xpath=//input[@placeholder='Confirm Password']'.</msg>
+<arg>${CONFIRM_PASSWORD_IN_SIGNUP}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:53.313485" elapsed="0.224942"/>
+</kw>
+<arg>98ujkas0^</arg>
+<arg>alskdjaslk@.com</arg>
+<arg>&amp;^%$(*</arg>
+<arg>&amp;^%$(*</arg>
+<status status="PASS" start="2024-08-26T19:59:52.721461" elapsed="0.816966"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T19:59:53.540428" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
+<arg>${SIGN_UP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T19:59:53.539429" elapsed="0.129513"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T19:59:56.672630" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T19:59:53.669944" elapsed="3.003690"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-26T19:59:56.674146" elapsed="4.135760"/>
+</kw>
+<status status="PASS" start="2024-08-26T19:59:36.938593" elapsed="23.871313"/>
+</test>
+<status status="PASS" start="2024-08-26T19:59:36.348692" elapsed="24.462213"/>
+</suite>
+<status status="PASS" start="2024-08-26T19:59:36.343677" elapsed="24.468230"/>
+</suite>
+<status status="PASS" start="2024-08-26T19:59:36.303820" elapsed="24.509595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SIGNUP PAGE TEST">Suites.SIGNUP PAGE TEST</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Negative SignUp Page Testcases">Suites.SIGNUP PAGE TEST.Negative SignUp Page Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-26T19:59:36.918340" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Settings\settings.robot' on line 3: Processing variable file '../Variables' failed: Importing variable file '../Variables' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages</msg>
+</errors>
+</robot>
