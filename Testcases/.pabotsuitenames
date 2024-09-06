@@ -1,0 +1,20 @@
+datasources:552f41b1e865111367e9e333af439b0c3e1d5179
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:1e2a5eab6f8a930cfb415f087879cbb1930b17a4
+--suite Suites.ChatgptAlternate Testcases
+--suite Suites.Forgotpassword Testcases
+--suite Suites.Landingpage Testcase
+--suite Suites.Loginpage Testcases
+--suite Suites.Negative ForgotPassword Testcases
+--suite Suites.Negative Login Page TESTCASES
+--suite Suites.Negative SignUp Page Testcases
+--suite Suites.SignUpPage Testcase
+--suite Suites.YourprivateGPT Testcase
+--suite Suites.Buffer Memory Testcases
+--suite Suites.ChatwithMF4 Testcases
+--suite Suites.Chatwithcode Testcases
+--suite Suites.Chatwithlog Testcases
+--suite Suites.Chatwithscript Testcases
+--suite Suites.Department Testcases
+--suite Suites.VoiceAssistant Testcases

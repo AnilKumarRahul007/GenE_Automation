@@ -1,0 +1,4 @@
+cd C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases
+pabot FORGOT_PASSWORD_TEST LANDING_PAGE_TEST LOGIN_PAGE_TEST SIGNUP_PAGE_TEST YOUR_PRIVATE_GPT_TEST
+cd ..
+python report.py

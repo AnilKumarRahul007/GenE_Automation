@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-08-26T19:59:36.553243" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="FORGOT PASSWORD TEST" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST">
+<suite id="s1-s1-s1" name="Negative ForgotPassword Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot">
+<test id="s1-s1-s1-t1" name="Verify GenE Logo In Forgot Password Page" line="6">
+<kw name="Forgot Password Link" owner="Forgotpassword_Keywords" type="SETUP">
+<kw name="Login Page" type="SETUP">
+<msg time="2024-08-26T19:59:37.493393" level="FAIL">No keyword with name 'Login Page' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-08-26T19:59:37.493393" elapsed="0.000000">No keyword with name 'Login Page' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-26T19:59:37.493393" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${EMAIL_VERIFY_PAGE_URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-26T19:59:37.493393" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-26T19:59:37.483795" elapsed="0.009598">No keyword with name 'Login Page' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-26T19:59:37.493393" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-26T19:59:37.473689" elapsed="0.019704">Setup failed:
+No keyword with name 'Login Page' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<status status="FAIL" start="2024-08-26T19:59:36.633484" elapsed="0.859909"/>
+</suite>
+<status status="FAIL" start="2024-08-26T19:59:36.633484" elapsed="0.864921"/>
+</suite>
+<status status="FAIL" start="2024-08-26T19:59:36.588489" elapsed="0.909916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="FORGOT PASSWORD TEST">Suites.FORGOT PASSWORD TEST</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Negative ForgotPassword Testcases">Suites.FORGOT PASSWORD TEST.Negative ForgotPassword Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-26T19:59:37.443289" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Settings\settings.robot' on line 3: Processing variable file '../Variables' failed: Importing variable file '../Variables' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages</msg>
+<msg time="2024-08-26T19:59:37.463577" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Forgotpassword_Keywords.robot' on line 3: Resource file '..\..\Keywords\Loginpage_Keywords.robot' does not exist.</msg>
+<msg time="2024-08-26T19:59:37.473689" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Forgotpassword_Keywords.robot' on line 5: Variable file 'Variables\Variables.py' does not exist.</msg>
+</errors>
+</robot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-08-13T16:24:56.582928" rpa="false" schemaversion="5">
+<suite id="s1" name="Check" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\Testcases\LOGIN_PAGE_TEST\check.robot">
+<test id="s1-t1" name="VERIFY LOGIN FUNCTIONALITY" line="22">
+<kw name="Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-13T16:24:57.722909" level="INFO">Opening browser 'chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-13T16:24:57.722909" elapsed="3.480172"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T16:25:01.203081" elapsed="0.039616"/>
+</kw>
+<status status="PASS" start="2024-08-13T16:24:57.722909" elapsed="3.519788"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-13T16:25:01.242697" level="INFO">Typing text 'shruthi.manjesh@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<arg>xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T16:25:01.242697" elapsed="0.211071"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-13T16:25:01.453768" level="INFO">Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.</msg>
+<arg>xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T16:25:01.453768" elapsed="0.111580"/>
+</kw>
+<arg>shruthi.manjesh@dtskill.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2024-08-13T16:25:01.242697" elapsed="0.322651"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-13T16:25:01.565348" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T16:25:01.565348" elapsed="0.060568"/>
+</kw>
+<status status="PASS" start="2024-08-13T16:25:01.565348" elapsed="0.060568"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-13T16:25:01.625916" elapsed="2.367186"/>
+</kw>
+<status status="PASS" start="2024-08-13T16:24:57.722909" elapsed="6.270193"/>
+</test>
+<status status="PASS" start="2024-08-13T16:24:56.592983" elapsed="7.400119"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Check">Check</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
