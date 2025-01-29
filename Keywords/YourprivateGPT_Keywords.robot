@@ -1,20 +1,11 @@
-*** Settings ***
-Variables   ../Variables/Variables.py
-Resource    ./Loginpage_Keywords.robot
+#*** Settings ***
+#Variables   ../Variables/Variables.py
+#Resource    ./Loginpage_Keywords.robot
 *** Keywords ***
-
-
-Fill Login Form
-    [Arguments]    ${email}    ${password}
-    Input Text    ${USERNAME_LOCATOR}    ${email}
-    Input Text    ${PASSWORD_LOCATOR}    ${password}
-
-Click Login Button
-    Click Element    ${LOGIN_BUTTON}
-    Sleep   3s
-
-Click SIDEMENU
-    Click Element    ${SIDE_MENU}
+Click SIDEMENU20
+    Wait Until Page Contains Element        ${SIDE_MENU}
+    Element Should Be Visible       ${SIDE_MENU}
+    Click Element       ${SIDE_MENU}
     Sleep   3s
 
 Click PRIVATEGPT
@@ -40,11 +31,6 @@ Verify GenE text & logo presence
     Element Should Be Visible       ${GENE_LOGO_IN_SUBPAGE_OF_PRIVATEGPT}
     Sleep   2s
 
-Verify ChatContainer
-    Wait Until Page Contains Element    xpath=/html/body/main/div/div[9]/div/div/div/div/div[2]
-    Element Should Be Visible       xpath=/html/body/main/div/div[9]/div/div/div/div/div[2]
-    Sleep   2s
-
 Verify Option in the top right corner of the subpage
     Wait Until Page Contains Element    ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
     Element Should Be Visible       ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
@@ -52,43 +38,7 @@ Verify Option in the top right corner of the subpage
     Click Element   ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
     Sleep   2s
 
-Verify all options are clickable
-    Click Element   ${REGENERATE_OPTION}
-    Sleep   2s
-    Click Element   ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
-    Sleep   2s
-    Click Element   ${PIN_CHAT_OPTION}
-    Sleep   2s
-    Click Element   ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
-    Sleep   2s
-    Click Element   ${RENAME_OPTION}
-    Sleep   2s
-    Click Element   ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
-    Sleep   2s
-    Click Element   ${SHARE_OPTION}
-    Sleep   2s
-    Click Element   ${OPTIONS_DROPDOWN_TOP_RIGHT_SIDE}
-    Sleep   2s
-    Click Element   ${DELETE_CHAT_OPTION}
-    Sleep   2s
-
-Verify Ask a Question Container
-    Wait Until Page Contains Element    ${ASK_A_QUESTION_CONTAINER}
-    Element Should Be Visible   ${ASK_A_QUESTION_CONTAINER}
-    Sleep   2s
-    Wait Until Page Contains Element    ${CAPTURE_LOGO_BESIDE_ASK_A_QUESTION}
-    Element Should Be Visible   ${CAPTURE_LOGO_BESIDE_ASK_A_QUESTION}
-    Sleep   2s
-    Wait Until Page Contains Element    ${CHOOSE_FILE_LOGO_OPTION}
-    Element Should Be Visible   ${CHOOSE_FILE_LOGO_OPTION}
-    Sleep   2s
-    Wait Until Page Contains Element    ${SEND_QUESTION_LOGO_OPTION}
-    Element Should Be Visible   ${SEND_QUESTION_LOGO_OPTION}
-    Sleep   2s
-    Click Element   ${SEND_QUESTION_LOGO_OPTION}
-    Sleep   2s
-
-Verify Right Menu
+Verify Right Menu in YourprivateGPT
     Wait Until Page Contains Element    ${RIGHT_MENU}
     Element Should Be Visible       ${RIGHT_MENU}
     Sleep   2s
@@ -161,7 +111,6 @@ Verify Right Menu
     Wait Until Location Is    ${UPLOAD_DIRECTORY_URL}    timeout=20s
     Location Should Be    ${UPLOAD_DIRECTORY_URL}
     Sleep   3s
-
 
 Upload Directory
     Wait Until Page Contains Element    ${FILE_TYPE_HEADING}

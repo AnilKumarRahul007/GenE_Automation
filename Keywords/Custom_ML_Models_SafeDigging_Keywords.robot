@@ -1,34 +1,12 @@
-*** Settings ***
-Variables   ../Variables/Variables.py
-Resource    Loginpage_Keywords.robot
+#*** Settings ***
+#Variables   ../Variables/Variables.py
+#Resource    Loginpage_Keywords.robot
 *** Keywords ***
-
-Fill Login Form
-    [Arguments]    ${email}    ${password}
-    Input Text    ${USERNAME_LOCATOR}    ${email}
-    Input Text    ${PASSWORD_LOCATOR}    ${password}
-
-Click Login Button
-    Click Element    ${LOGIN_BUTTON}
+Click SIDEMENU13
+    Wait Until Page Contains Element        ${SIDE_MENU}
+    Element Should Be Visible       ${SIDE_MENU}
+    Click Element       ${SIDE_MENU}
     Sleep   3s
-
-Click SIDEMENU
-    Click Element    ${SIDE_MENU}
-    Sleep   3s
-
-Verify all SIDEMENU OPTIONS
-    Wait Until Page Contains Element    ${SIDEMENU_OPTIONS}
-    Element Should Be Visible       ${SIDEMENU_OPTIONS}
-    Sleep   1s
-    Wait Until Page Contains Element    ${SUBCRIPTION_BOX}
-    Element Should Be Visible       ${SUBCRIPTION_BOX}
-    Sleep   1s
-    Wait Until Page Contains Element    ${USERIMAGE_IN_SUBCRIPTION_BOX}
-    Element Should Be Visible       ${USERIMAGE_IN_SUBCRIPTION_BOX}
-    Sleep   1s
-    Wait Until Page Contains Element    ${USERNAME_IN_SUBCRIPTION_BOX}
-    Element Should Be Visible       ${USERNAME_IN_SUBCRIPTION_BOX}
-    Sleep   1s
 
 Click Custom ML Models
     Wait Until Page Contains Element    ${CUSTOM_ML_MODELS_BOX}

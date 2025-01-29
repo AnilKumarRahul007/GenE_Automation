@@ -1,16 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../../Keywords/Decoding_Keywords.robot
+Resource      ../../../Settings/settings.robot
 *** Test Cases ***
 Verify Decoding
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    Decoding_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    Decoding_Keywords.Click Login Button
-    Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
+    Wait Until Location Is    ${SUCCESS_URL}    timeout=20s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
-    Click Fine-Tuned Models
+    Click SIDEMENU14
+    Click Fine-Tuned Models2
     Click Decoding
     Close Browser

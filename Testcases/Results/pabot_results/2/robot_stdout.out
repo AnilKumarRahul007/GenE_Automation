@@ -1,14 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Landingpage Testcase                                                   
+Suites.ChatwithMF4 Testcases                                                  
 ==============================================================================
-Verify UI and Navigation                                              | PASS |
+Verifying ChatwithMF4                                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\CHAT_WITH_MF4\ChatwithMF4_Testcases.robot:5
+    T:  Verifying ChatwithMF4    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\CHAT_WITH_MF4\ChatwithMF4_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
 ------------------------------------------------------------------------------
-Suites.Landingpage Testcase                                           | PASS |
-1 test, 1 passed, 0 failed
+Suites.ChatwithMF4 Testcases                                          | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\2\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\2\output.xml

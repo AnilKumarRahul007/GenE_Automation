@@ -1,12 +1,7 @@
-*** Settings ***
-Variables      ../Variables/Variables.py
-Resource    ./Loginpage_Keywords.robot
+#*** Settings ***
+#Variables      ../Variables/Variables.py
+#Resource    ./Loginpage_Keywords.robot
 *** Keywords ***
-Login Page
-    Open Browser    ${URL}    chrome
-    Maximize Browser Window
-    Verify Gen E Logo Presence
-
 Verify Gen E Logo Presence
     Wait Until Page Contains Element    ${LOGO_LOCATOR}    timeout=5s
     Element Should Be Visible    ${LOGO_LOCATOR}
@@ -52,22 +47,6 @@ Verify Sign Up Presence
     Element Should Be Visible   ${SIGN_UP_PRESENCE}     timeout=2s
     Sleep   2s
 
-Fill Login Form
-    [Arguments]    ${email}    ${password}
-    Verify Gen E Logo Presence
-    Verify Email Logo Presence
-    Verify Email Text Presence
-    Verify Password Logo Presence
-    Verify Password Text Presence
-    Verify Forgot Password Presence
-    Verify Sign In Presence
-    Verify Sign Up Presence
-    Input Text    ${USERNAME_LOCATOR}    ${email}
-    Input Text    ${PASSWORD_LOCATOR}    ${password}
-
-Click Login Button
-    Click Element    ${LOGIN_BUTTON}
-    Sleep   3s
 
 Check for two options available on the top menu lists on the Dashboard
     Wait Until Page Contains Element    ${TWO_OPTIONS_IN_LANDING_PAGE}    timeout=5s
@@ -96,16 +75,8 @@ Verify DASHBOARD presence
     Element Should Be Visible    ${DASHBOARD_PRESENCE}
     Sleep   2s
 
-Click HOME
-    Click Element    xpath=/html/body/main/div/header/div/div/div[2]/nav/ul/li[1]/a
-    Sleep   3s
-
-Click SIDEMENU
-    Click Element    ${SIDE_MENU}
-    Sleep   3s
-
-Click PRIVATEGPT
-    Click Element    ${PRIVATE_GPT}
+Click USER
+    Click Element    xpath=/html/body/main/div[1]/div/a/div
     Sleep   3s
 
 Element Should Be Highlighted

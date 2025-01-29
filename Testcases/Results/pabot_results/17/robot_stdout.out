@@ -1,0 +1,41 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Negative SignUp Page Testcases                                         
+==============================================================================
+Checking Negative Signup Cases                                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot:5
+    T:  Checking Negative Signup Cases    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot:6
+      Open Sign Up Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\SignUpPage_Keywords.robot:4
+      Open Browser    ${URL}    chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot:5
+    T:  Checking Negative Signup Cases    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot:31
+      Close Browser    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.
+------------------------------------------------------------------------------
+Suites.Negative SignUp Page Testcases                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\17\output.xml

@@ -1,6 +1,7 @@
 # *** LOGIN PAGE ***
 URL = "https://gene-nextjs-dev.dtskill.com/signin"
 BROWSER = "chrome"
+HEADLESS = "headlesschrome"
 USERNAME = "varun.datt@dtskill.com"
 PASSWORD = "123456"
 VALID_PASSWORD = "123456"
@@ -18,7 +19,7 @@ FORGOT_PASSWORD_PRESENCE = "xpath=//div[@class='forget-text']"
 SIGN_IN_PRESENCE = "xpath=//button[normalize-space()='Sign In']"
 SIGN_UP_PRESENCE = "xpath=//span[normalize-space()='Sign Up']"
 
-# ***FORGOT PASSWORD PAGE***
+# *** FORGOT PASSWORD PAGE ***
 
 FORGOT_PASSWORD_LINK = "xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[3]/a/span"
 GENE_LOGO_PRESENCE = "xpath=//img[@alt='sign-up logo']"
@@ -74,7 +75,7 @@ DASHBOARD_PRESENCE = "xpath=//div[@class='chat-box-section mt-60 table-container
 
 # *** YOUR PRIVATE GPT PAGE ***
 
-SIDE_MENU = "xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i"
+SIDE_MENU = "xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button"
 PRIVATE_GPT = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[1]/a/span"
 PRIVATE_GPT_IN_SUBPAGE = "xpath=//h6[normalize-space()='Private gpt']"
 PRIVATE_GPT_LOGO_IN_SUBPAGE = "xpath=//img[@alt='Icon']"
@@ -115,6 +116,7 @@ FIRST_PAGE_INDICATOR = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[2]"
 SECOND_PAGE_INDICATOR = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[3]"
 
 # ***ChatgptAlternate Page ***
+
 SIDEMENU_OPTIONS = "xpath=/html/body/main/div/div[1]/div/div[1]"
 SUBCRIPTION_BOX = "xpath=/html/body/main/div/div[1]/div/div[2]"
 USERIMAGE_IN_SUBCRIPTION_BOX = "xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[1]/img"
@@ -166,23 +168,24 @@ SUMMARY_BUFFER_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/d
 SUMMARY_BUFFER_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/summary-buffer"
 SUMMARY_BUFFER_IN_SUBPAGE = "xpath=/html/body/main/div/div[9]/div/div/div/div/div[1]/div[1]/h6"
 SUMMARY_BUFFER_LOGO_IN_SUBPAGE = "xpath=/html/body/main/div/div[9]/div/div/div/div/div[1]/div[1]/div"
-CHAT_WITH_MF4 = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[7]/a"
+CHAT_WITH_MF4 = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[8]/a"
 CHAT_WITH_MF4_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[6]/a/img"
 CHAT_WITH_MF4_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/chat-with-mf4"
 CHAT_WITH_MF4_IN_SUBPAGE = "xpath=//h6[normalize-space()='Chat With MF4']"
 CHAT_WITH_MF4_LOGO_IN_SUBPAGE = "xpath=//img[@alt='Icon']"
-DEPARTMENT = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[8]/a"
+DEPARTMENT = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[9]/a"
 DEPARTMENT_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[7]/a/img"
 DEPARTMENT_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/department"
 DEPARTMENT_IN_SUBPAGE = "xpath=//h6[normalize-space()='Department']"
 DEPARTMENT_LOGO_IN_SUBPAGE = "xpath=//img[@alt='Icon']"
-VOICE_ASSISTANT = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[9]/a"
+VOICE_ASSISTANT = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[10]/a"
 VOICE_ASSISTANT_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[2]/div/ul/li[8]/a/img"
 VOICE_ASSISTANT_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/voice-assistant"
 VOICE_ASSISTANT_IN_SUBPAGE = "xpath=//h6[normalize-space()='Voice Assistant']"
 VOICE_ASSISTANT_LOGO_IN_SUBPAGE = "xpath=//img[@alt='Icon']"
 
 # *** Fine-Tuned Models Email Classification Page ***
+
 FINE_TUNED_MODELS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/a"
 FINE_TUNED_MODELS_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/a/img"
 OPTIONS_IN_FINE_TUNED_MODELS = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/div/ul"
@@ -201,16 +204,19 @@ Anyscale_Llama_option = "xpath=//div[contains(text(),'Anyscale Llama')]"
 Gemma_7_Instruct_Option = "xpath=//div[contains(text(),'Gemma7 Instruct')]"
 
 # *** Fine-Tuned Models Decoding Page ***
+
 DECODING_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/div/ul/li[2]/a"
 DECODING_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/div/ul/li[2]/a/img"
 DECODING_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/decoding"
 
 # *** ESB NOTES ACTION TAGGING Page ***
+
 ESB_NOTES_ACTION_TAGGING_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/div/ul/li[3]/a"
 ESB_NOTES_ACTION_TAGGING_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[3]/div/ul/li[3]/a/img"
 ESB_NOTES_ACTION_TAGGING_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/esb"
 
 # *** CUSTOM ML MODELS Page ***
+
 CUSTOM_ML_MODELS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/a"
 CUSTOM_ML_MODELS_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/a/img"
 SAFE_DIGGING_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[4]/div"
@@ -247,6 +253,7 @@ PAGE_NUMBER = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[2]/a"
 SCROLL_BAR = "xpath=//div[@class='chat-box-section mt-60 table-container']"
 
 # *** SALESFORCE KB EXPLORER PAGE IN AI AGENTS ***
+
 AI_AGENTS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a"
 AI_AGENTS_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a/img"
 OPTIONS_IN_AI_AGENTS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div"
@@ -259,6 +266,7 @@ SALESFORCE_KB_EXPLORER_LOGO_IN_SUBPAGE = "xpath=/html/body/main/div/div[9]/div/d
 ASK_A_QUESTION_TEXT = "xpath=//textarea[@placeholder='Ask a question...']"
 
 # *** HANDWRITTEN OCR PAGE IN AI AGENTS ***
+
 HANDWRITTEN_OCR_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a"
 HANDWRITTEN_OCR_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a/img"
 HANDWRITTEN_OCR_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/hand-written-ocr"
@@ -275,11 +283,13 @@ UPLOAD_IMAGE_LOGO_IN_CONTAINER = "xpath=/html/body/main/div/div[8]/div/div[1]/di
 TEXT_IN_UPLOAD_IMAGE_CONTAINER = "xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]/span"
 
 # *** EMAIL EXTRACTION IN AI AGENTS ***
+
 EMAIL_EXTRACTION_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[4]/a"
 EMAIL_EXTRACTION_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[4]/a/img"
 EMAIL_EXTRACTION_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/email-extraction"
 
 # *** SAI SCRIPT-DEMO PAGE IN AI AGENTS ***
+
 SAI_SCRIPT_DISTRO_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[5]/a"
 SAI_SCRIPT_DISTRO_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[5]/a/img"
 SAI_SCRIPT_DISTRO_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/sai-script-distro"
@@ -297,7 +307,8 @@ DESTINATION_FOLDER_TEXT = "xpath=/html/body/main/div/div[8]/div/div/div/div/div/
 DESTINATION_FOLDER_CONTAINER = "xpath=/html/body/main/div/div[8]/div/div/div/div/div/form/div[5]/div/input"
 SUBMIT_BUTTON_IN_SAI_SCRIPT_DISTRO_SUBPAGE = "xpath=/html/body/main/div/div[8]/div/div/div/div/div/form/div[6]/div/button"
 
-# *** LLM METRICS LLM PERFORMANCE PAGE
+# *** LLM METRICS LLM PERFORMANCE PAGE ***
+
 LLM_METRICS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[6]/a"
 LLM_METRICS_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[6]/a/img"
 LLM_PERFORMANCE_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[6]/div/ul/li[1]/a"
@@ -373,5 +384,45 @@ EXPLANATION_IN_POLITENESS = "xpath=/html/body/main/div/div[9]/div/div/div/div/di
 CLOSE_BUTTON_OF_POPUP = "xpath=/html/body/main/div/div[9]/div/div/button"
 SCROLLABLE_ELEMENT = "xpath=/html/body/main/div/div[9]/div/div"
 
+# *** LLM METRICS LLM COST PAGE ***
 
+LLM_COST_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[6]/div/ul/li[2]/a"
+LLM_COST_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[6]/div/ul/li[2]/a/img"
+LLM_COST_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/llm-gateway"
+LLM_COST_TABLE = "xpath=/html/body/main/div/div[8]/div"
 
+# *** User Management ***
+
+USER_MANAGEMENT_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/a"
+USER_MANAGEMENT_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/a/img"
+USER_MANAGEMENT_OPTIONS = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/div"
+DEPARTMENTS_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/div/ul/li[1]/a"
+DEPARTMENTS_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/div/ul/li[1]/a/img"
+DEPARTMENTS_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/user-management/departments"
+ADD_NEW_DEPARTMENT_BOX = "xpath=/html/body/main/div/div[8]/div/div[1]/div"
+DEPARTMENT_NAME_BOX = "xpath=/html/body/main/div/div[9]/div/div"
+DEPARTMENT_NAME_ENTERING_CONTAINER = "xpath=/html/body/main/div/div[9]/div/div/div/div/div/div/input"
+SAVE_BUTTON = "xpath=/html/body/main/div/div[9]/div/div/div/div/button"
+CLOSE_BUTTON_OF_DEPARTMENT_NAME_BOX = "xpath=/html/body/main/div/div[9]/div/div/button"
+TABLE_IN_USERS_PAGE = "xpath=/html/body/main/div/div[8]/div/div[2]"
+COLUMN1_IN_USERS_TABLE = "SI.NO"
+COLUMN2_IN_USERS_TABLE = "Departments"
+LEFT_ARROW_IN_DEPARTMENTS_PAGE = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[1]/a"
+RIGHT_ARROW_IN_DEPARTMENTS_PAGE = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[3]/a"
+PAGE_NUMBER_IN_DEPARTMENTS = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[2]/a"
+
+# Organisation Page in User Management ***
+
+ORGANISATION_BOX = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/div/ul/li[2]/a"
+ORGANISATION_BOX_LOGO = "xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[7]/div/ul/li[2]/a/img"
+ORGANISATION_URL = "https://gene-nextjs-dev.dtskill.com/dashboard/user-management/organisation"
+ADD_NEW_ORGANISATION_BUTTON = "xpath=/html/body/main/div/div[8]/div/div[1]/div"
+SAVE_BUTTON_IN_ORGANISATION_SUBPAGE = "xpath=/html/body/main/div/div[9]/div/div/div/div/button"
+CLOSE_BUTTON_OF_ORGANISATION_NAME_BOX = "xpath=/html/body/main/div/div[9]/div/div/button"
+TABLE_IN_ORGANISATION_PAGE = "xpath=/html/body/main/div/div[8]/div/div[2]/table"
+COLUMN1_IN_ORGANISATION_TABLE = "Organisation"
+COLUMN2_IN_ORGANISATION_TABLE = "End Point"
+COLUMN3_IN_ORGANISATION_TABLE = "Token"
+LEFT_ARROW_IN_ORGANISATION_PAGE = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[1]/a"
+RIGHT_ARROW_IN_ORGANISATION_PAGE = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[3]/a"
+PAGE_NUMBER_IN_ORGANISATION = "xpath=/html/body/main/div/div[8]/div/div[3]/ul/li[2]/a"

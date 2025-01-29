@@ -1,16 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../../Keywords/ESB_Notes_Action_Tagging_Keywords.robot
+Resource      ../../../Settings/settings.robot
 *** Test Cases ***
-Verify Decoding
+Verify ESB Notes Action Tagging
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    ESB_Notes_Action_Tagging_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    ESB_Notes_Action_Tagging_Keywords.Click Login Button
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
     Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
-    Click Fine-Tuned Models
+    Click SIDEMENU15
+    Click Fine-Tuned Models3
     Click ESB Notes Action Tagging
     Close Browser

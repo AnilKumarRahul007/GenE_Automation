@@ -1,510 +1,679 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-04T16:17:35.735210" rpa="false" schemaversion="5">
-<suite id="s1" name="HandWritten OCR Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\AI_AGENTS_TEST\HANDWRITTEN_OCR_TEST\HandWritten_OCR_Testcases.robot">
-<test id="s1-t1" name="Verify Decoding" line="5">
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-18T12:51:01.954100" rpa="false" schemaversion="5">
+<suite id="s1" name="HandWritten OCR Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\AI_AGENTS_TEST\HANDWRITTEN_OCR_TEST\HandWritten_OCR_Testcases.robot">
+<test id="s1-t1" name="Verify Handwritten OCR" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:35.995283" level="INFO">Opening browser 'Chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<msg time="2024-09-18T12:51:02.374831" level="INFO">Opening browser 'Chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-04T16:17:35.995283" elapsed="3.499074"/>
+<status status="PASS" start="2024-09-18T12:51:02.374831" elapsed="2.971482"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-04T16:17:39.495865" elapsed="0.031302"/>
+<status status="PASS" start="2024-09-18T12:51:05.346313" elapsed="0.036744"/>
 </kw>
-<kw name="Fill Login Form" owner="AI_Agents_Handwritten_OCR_Keywords">
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<kw name="Verify Gen E Logo Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGO_LOCATOR}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:05.386640" elapsed="0.017024"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:05.420858" level="INFO">Element 'xpath=/html/body/main/div/div/div/div[1]/div/div[1]/img' is displayed.</msg>
+<arg>${LOGO_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:05.403664" elapsed="0.017194"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:07.428631" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:05.420858" elapsed="2.007773"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:05.386640" elapsed="2.041991"/>
+</kw>
+<kw name="Verify Email Logo Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_LOGO}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:07.428631" elapsed="0.039992"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:07.518740" level="INFO">Element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']' is displayed.</msg>
+<arg>${EMAIL_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:07.468623" elapsed="0.050117"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:09.526760" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:07.518740" elapsed="2.008020"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:07.428631" elapsed="2.098129"/>
+</kw>
+<kw name="Verify Email Text Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_TEXT_PRESENCE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:09.526760" elapsed="0.039994"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:09.617499" level="INFO">Element 'xpath=//input[@placeholder='Enter email address']' is displayed.</msg>
+<arg>${EMAIL_TEXT_PRESENCE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:09.566754" elapsed="0.051864"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:11.625716" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:09.618618" elapsed="2.007098"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:09.526760" elapsed="2.098956"/>
+</kw>
+<kw name="Verify Password Logo Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PASSWORD_LOGO}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:11.625716" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:11.645514" level="INFO">Element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']' is displayed.</msg>
+<arg>${PASSWORD_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:11.625716" elapsed="0.019798"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:13.652466" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:11.645514" elapsed="2.006952"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:11.625716" elapsed="2.026750"/>
+</kw>
+<kw name="Verify Password Text Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PASSWORD_TEXT}</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:13.652466" elapsed="0.039993"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:13.724188" level="INFO">Element 'xpath=//i[@class='fa-sharp fa-regular fa-lock']' is displayed.</msg>
+<arg>${PASSWORD_TEXT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:13.692459" elapsed="0.031729"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:15.731889" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:13.724188" elapsed="2.007701"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:13.652466" elapsed="2.079423"/>
+</kw>
+<kw name="Verify Forgot Password Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD_PRESENCE}</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:15.731889" elapsed="0.009984"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:15.762348" level="INFO">Element 'xpath=//div[@class='forget-text']' is displayed.</msg>
+<arg>${FORGOT_PASSWORD_PRESENCE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:15.741873" elapsed="0.020475"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:17.766145" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:15.762348" elapsed="2.003797"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:15.731889" elapsed="2.034256"/>
+</kw>
+<kw name="Verify Sign In Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGN_IN_PRESENCE}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:17.766145" elapsed="0.040074"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:17.856252" level="INFO">Element 'xpath=//button[normalize-space()='Sign In']' is displayed.</msg>
+<arg>${SIGN_IN_PRESENCE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:17.806219" elapsed="0.050033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:19.864436" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:17.856252" elapsed="2.008184"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:17.766145" elapsed="2.098291"/>
+</kw>
+<kw name="Verify Sign Up Presence" owner="Loginpage_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGN_UP_PRESENCE}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-18T12:51:19.864436" elapsed="0.042547"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-18T12:51:19.954540" level="INFO">Element 'xpath=//span[normalize-space()='Sign Up']' is displayed.</msg>
+<arg>${SIGN_UP_PRESENCE}</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-18T12:51:19.906983" elapsed="0.047557"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-18T12:51:21.960295" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-18T12:51:19.954540" elapsed="2.005755"/>
+</kw>
+<status status="PASS" start="2024-09-18T12:51:19.864436" elapsed="2.095859"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:39.527167" level="INFO">Typing text 'varun.datt@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
+<msg time="2024-09-18T12:51:21.960295" level="INFO">Typing text 'varun.datt@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.</msg>
 <arg>${USERNAME_LOCATOR}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:39.527167" elapsed="0.166739"/>
+<status status="PASS" start="2024-09-18T12:51:21.960295" elapsed="0.336462"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:39.694529" level="INFO">Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.</msg>
+<msg time="2024-09-18T12:51:22.296757" level="INFO">Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.</msg>
 <arg>${PASSWORD_LOCATOR}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:39.694529" elapsed="0.084625"/>
+<status status="PASS" start="2024-09-18T12:51:22.296757" elapsed="0.127678"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-09-04T16:17:39.527167" elapsed="0.251987"/>
+<status status="PASS" start="2024-09-18T12:51:05.386100" elapsed="17.038335"/>
 </kw>
-<kw name="Click Login Button" owner="AI_Agents_Handwritten_OCR_Keywords">
+<kw name="Click Login Button" owner="Loginpage_Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:39.779154" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
+<msg time="2024-09-18T12:51:22.425459" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:39.779154" elapsed="0.048538"/>
+<status status="PASS" start="2024-09-18T12:51:22.425459" elapsed="0.054342"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:42.837595" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2024-09-18T12:51:24.487259" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:39.827692" elapsed="3.009903"/>
+<status status="PASS" start="2024-09-18T12:51:22.479801" elapsed="2.008245"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:39.779154" elapsed="3.058441"/>
+<status status="PASS" start="2024-09-18T12:51:22.424435" elapsed="2.063611"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${SUCCESS_URL}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:17:42.837595" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-18T12:51:24.488046" elapsed="0.024065"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:42.847602" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard'.</msg>
+<msg time="2024-09-18T12:51:24.541366" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard'.</msg>
 <arg>${SUCCESS_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2024-09-04T16:17:42.837595" elapsed="0.010007"/>
+<status status="PASS" start="2024-09-18T12:51:24.514631" elapsed="0.026735"/>
 </kw>
-<kw name="Click SIDEMENU" owner="AI_Agents_Handwritten_OCR_Keywords">
+<kw name="Click SIDEMENU" owner="AI_Agents_Email_Extraction_Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:42.847602" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i'.</msg>
+<msg time="2024-09-18T12:51:24.551386" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button'.</msg>
 <arg>${SIDE_MENU}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:42.847602" elapsed="0.041361"/>
+<status status="PASS" start="2024-09-18T12:51:24.551386" elapsed="0.103501"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:45.895234" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-09-18T12:51:27.666853" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:42.888963" elapsed="3.006271"/>
+<status status="PASS" start="2024-09-18T12:51:24.657899" elapsed="3.008954"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:42.847602" elapsed="3.047632"/>
+<status status="PASS" start="2024-09-18T12:51:24.541366" elapsed="3.125487"/>
 </kw>
-<kw name="Verify all SIDEMENU OPTIONS" owner="AI_Agents_Handwritten_OCR_Keywords">
+<kw name="Verify all SIDEMENU OPTIONS" owner="ChatgptAlternate_Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${SIDEMENU_OPTIONS}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:45.895234" elapsed="0.010014"/>
+<status status="PASS" start="2024-09-18T12:51:27.667861" elapsed="0.012630"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:45.925257" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]' is displayed.</msg>
+<msg time="2024-09-18T12:51:27.687227" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div' is displayed.</msg>
 <arg>${SIDEMENU_OPTIONS}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:45.905248" elapsed="0.020009"/>
+<status status="PASS" start="2024-09-18T12:51:27.680491" elapsed="0.006736"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:46.926190" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:28.689382" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:45.925257" elapsed="1.000933"/>
+<status status="PASS" start="2024-09-18T12:51:27.687227" elapsed="1.002155"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${SUBCRIPTION_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:46.926190" elapsed="0.009997"/>
+<status status="PASS" start="2024-09-18T12:51:28.689382" elapsed="0.030050"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:46.946202" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]' is displayed.</msg>
+<msg time="2024-09-18T12:51:28.769464" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]' is displayed.</msg>
 <arg>${SUBCRIPTION_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:46.936187" elapsed="0.010015"/>
+<status status="PASS" start="2024-09-18T12:51:28.719432" elapsed="0.050032"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:47.956943" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:29.771038" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:46.946202" elapsed="1.010741"/>
+<status status="PASS" start="2024-09-18T12:51:28.769464" elapsed="1.001574"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${USERIMAGE_IN_SUBCRIPTION_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:47.956943" elapsed="0.010005"/>
+<status status="PASS" start="2024-09-18T12:51:29.771038" elapsed="0.009998"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:47.986961" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[1]/img' is displayed.</msg>
+<msg time="2024-09-18T12:51:29.811064" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[1]/img' is displayed.</msg>
 <arg>${USERIMAGE_IN_SUBCRIPTION_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:47.966948" elapsed="0.020013"/>
+<status status="PASS" start="2024-09-18T12:51:29.781036" elapsed="0.030028"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:48.987882" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:30.812430" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:47.986961" elapsed="1.000921"/>
+<status status="PASS" start="2024-09-18T12:51:29.811064" elapsed="1.001366"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${USERNAME_IN_SUBCRIPTION_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:48.987882" elapsed="0.010014"/>
+<status status="PASS" start="2024-09-18T12:51:30.812430" elapsed="0.030072"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:49.007957" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[2]' is displayed.</msg>
+<msg time="2024-09-18T12:51:30.892426" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[2]/div/a/div[2]' is displayed.</msg>
 <arg>${USERNAME_IN_SUBCRIPTION_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:49.001405" elapsed="0.006552"/>
+<status status="PASS" start="2024-09-18T12:51:30.842502" elapsed="0.049924"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:50.008883" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:31.904669" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:49.007957" elapsed="1.000926"/>
+<status status="PASS" start="2024-09-18T12:51:30.893494" elapsed="1.011175"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:45.895234" elapsed="4.113649"/>
+<status status="PASS" start="2024-09-18T12:51:27.667861" elapsed="4.236808"/>
 </kw>
-<kw name="Click AI Agents" owner="AI_Agents_Handwritten_OCR_Keywords">
+<kw name="Click AI Agents" owner="AI_Agents_Email_Extraction_Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${AI_AGENTS_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:50.008883" elapsed="0.010011"/>
+<status status="PASS" start="2024-09-18T12:51:31.904669" elapsed="0.040129"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:50.028894" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a' is displayed.</msg>
+<msg time="2024-09-18T12:51:31.993283" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a' is displayed.</msg>
 <arg>${AI_AGENTS_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:50.018894" elapsed="0.010000"/>
+<status status="PASS" start="2024-09-18T12:51:31.944798" elapsed="0.048485"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:51.049617" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:32.997641" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:50.028894" elapsed="1.020723"/>
+<status status="PASS" start="2024-09-18T12:51:31.994519" elapsed="1.003122"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${AI_AGENTS_BOX_LOGO}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:51.049617" elapsed="0.009999"/>
+<status status="PASS" start="2024-09-18T12:51:32.997641" elapsed="0.009999"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:51.069617" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a/img' is displayed.</msg>
+<msg time="2024-09-18T12:51:33.020663" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a/img' is displayed.</msg>
 <arg>${AI_AGENTS_BOX_LOGO}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:51.059616" elapsed="0.010001"/>
+<status status="PASS" start="2024-09-18T12:51:33.007640" elapsed="0.013023"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:52.080542" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:34.029685" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:51.069617" elapsed="1.010925"/>
+<status status="PASS" start="2024-09-18T12:51:33.027679" elapsed="1.002006"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:52.080542" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a'.</msg>
+<msg time="2024-09-18T12:51:34.029685" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/a'.</msg>
 <arg>${AI_AGENTS_BOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:52.080542" elapsed="0.050483"/>
+<status status="PASS" start="2024-09-18T12:51:34.029685" elapsed="0.097687"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${OPTIONS_IN_AI_AGENTS_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:52.131025" elapsed="0.014490"/>
+<status status="PASS" start="2024-09-18T12:51:34.127966" elapsed="0.024163"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:52.170523" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div' is displayed.</msg>
+<msg time="2024-09-18T12:51:34.171996" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div' is displayed.</msg>
 <arg>${OPTIONS_IN_AI_AGENTS_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:52.145515" elapsed="0.025008"/>
+<status status="PASS" start="2024-09-18T12:51:34.152345" elapsed="0.019651"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:53.170840" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:35.180614" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:52.170523" elapsed="1.000317"/>
+<status status="PASS" start="2024-09-18T12:51:34.171996" elapsed="1.008618"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:50.008883" elapsed="3.161957"/>
+<status status="PASS" start="2024-09-18T12:51:31.904669" elapsed="3.275945"/>
 </kw>
 <kw name="Click HandWritten OCR" owner="AI_Agents_Handwritten_OCR_Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${HANDWRITTEN_OCR_BOX}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:53.170840" elapsed="0.010002"/>
+<status status="PASS" start="2024-09-18T12:51:35.180614" elapsed="0.019988"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:53.190844" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a' is displayed.</msg>
+<msg time="2024-09-18T12:51:35.223136" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a' is displayed.</msg>
 <arg>${HANDWRITTEN_OCR_BOX}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:53.180842" elapsed="0.010002"/>
+<status status="PASS" start="2024-09-18T12:51:35.200602" elapsed="0.022534"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:54.191413" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:36.231726" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:53.190844" elapsed="1.000569"/>
+<status status="PASS" start="2024-09-18T12:51:35.223136" elapsed="1.008590"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${HANDWRITTEN_OCR_BOX_LOGO}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:17:54.191413" elapsed="0.010022"/>
+<status status="PASS" start="2024-09-18T12:51:36.231726" elapsed="0.010148"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:54.221492" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a/img' is displayed.</msg>
+<msg time="2024-09-18T12:51:36.271896" level="INFO">Element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a/img' is displayed.</msg>
 <arg>${HANDWRITTEN_OCR_BOX_LOGO}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:17:54.201435" elapsed="0.020057"/>
+<status status="PASS" start="2024-09-18T12:51:36.241874" elapsed="0.030022"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:55.222350" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:37.273395" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:54.221492" elapsed="1.000858"/>
+<status status="PASS" start="2024-09-18T12:51:36.271896" elapsed="1.001499"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:55.222350" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a'.</msg>
+<msg time="2024-09-18T12:51:37.273395" level="INFO">Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[5]/div/ul/li[2]/a'.</msg>
 <arg>${HANDWRITTEN_OCR_BOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:55.222350" elapsed="0.064714"/>
+<status status="PASS" start="2024-09-18T12:51:37.273395" elapsed="0.197580"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${HANDWRITTEN_OCR_URL}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:17:55.287064" elapsed="0.009859"/>
+<status status="PASS" start="2024-09-18T12:51:37.471557" elapsed="0.115742"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:55.304513" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard/hand-written-ocr'.</msg>
+<msg time="2024-09-18T12:51:37.604415" level="INFO">Current location is 'https://gene-nextjs-dev.dtskill.com/dashboard/hand-written-ocr'.</msg>
 <arg>${HANDWRITTEN_OCR_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2024-09-04T16:17:55.297923" elapsed="0.006590"/>
+<status status="PASS" start="2024-09-18T12:51:37.587299" elapsed="0.017116"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:17:58.314362" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-09-18T12:51:40.605139" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:55.304513" elapsed="3.009849"/>
+<status status="PASS" start="2024-09-18T12:51:37.604415" elapsed="3.000724"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:17:58.314362" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i'.</msg>
+<msg time="2024-09-18T12:51:40.605139" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button'.</msg>
 <arg>${SIDE_MENU}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:17:58.314362" elapsed="0.046786"/>
+<status status="PASS" start="2024-09-18T12:51:40.605139" elapsed="0.042218"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:00.363061" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-09-18T12:51:42.650196" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:17:58.361148" elapsed="2.001913"/>
+<status status="PASS" start="2024-09-18T12:51:40.647357" elapsed="2.002839"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:00.363061" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i'.</msg>
+<msg time="2024-09-18T12:51:42.650196" level="INFO">Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button'.</msg>
 <arg>${SIDE_MENU}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:18:00.363061" elapsed="0.036286"/>
+<status status="PASS" start="2024-09-18T12:51:42.650196" elapsed="0.109617"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:02.410268" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-09-18T12:51:44.760851" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:00.399347" elapsed="2.010921"/>
+<status status="PASS" start="2024-09-18T12:51:42.759813" elapsed="2.001038"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:53.170840" elapsed="9.239428"/>
+<status status="PASS" start="2024-09-18T12:51:35.180614" elapsed="9.580237"/>
 </kw>
 <kw name="Verify Sub-Page in HandWritten OCR" owner="AI_Agents_Handwritten_OCR_Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${SUBPAGE_IN_HANDWRITTEN_OCR_PAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:02.410268" elapsed="0.010048"/>
+<status status="PASS" start="2024-09-18T12:51:44.760851" elapsed="0.012842"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:02.430324" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div' is displayed.</msg>
+<msg time="2024-09-18T12:51:44.791805" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div' is displayed.</msg>
 <arg>${SUBPAGE_IN_HANDWRITTEN_OCR_PAGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:18:02.420316" elapsed="0.010008"/>
+<status status="PASS" start="2024-09-18T12:51:44.773693" elapsed="0.018112"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:03.441253" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:45.793276" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:02.430324" elapsed="1.010929"/>
+<status status="PASS" start="2024-09-18T12:51:44.791805" elapsed="1.001471"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${UPLOAD_IMAGE_HEADING_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:03.441253" elapsed="0.009997"/>
+<status status="PASS" start="2024-09-18T12:51:45.793276" elapsed="0.010007"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:03.451250" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/h5' contains exact text 'Upload Image'.</msg>
+<msg time="2024-09-18T12:51:45.803283" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/h5' contains exact text 'Upload Image'.</msg>
 <arg>${UPLOAD_IMAGE_HEADING_IN_SUBPAGE}</arg>
 <arg>Upload Image</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:03.451250" elapsed="0.020000"/>
+<status status="PASS" start="2024-09-18T12:51:45.803283" elapsed="0.030037"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:04.471979" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:46.834882" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:03.471250" elapsed="1.000729"/>
+<status status="PASS" start="2024-09-18T12:51:45.833320" elapsed="1.001562"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LATEX_OUTPUT_TEXT_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:04.471979" elapsed="0.010008"/>
+<status status="PASS" start="2024-09-18T12:51:46.834882" elapsed="0.030081"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:04.481987" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[1]/h6' contains exact text 'Latex output'.</msg>
+<msg time="2024-09-18T12:51:46.874964" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[1]/h6' contains exact text 'Latex output'.</msg>
 <arg>${LATEX_OUTPUT_TEXT_IN_SUBPAGE}</arg>
 <arg>Latex output</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:04.481987" elapsed="0.009999"/>
+<status status="PASS" start="2024-09-18T12:51:46.864963" elapsed="0.062896"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:05.492717" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:47.937878" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:04.491986" elapsed="1.000731"/>
+<status status="PASS" start="2024-09-18T12:51:46.928993" elapsed="1.008885"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${RENDERED_OUTPUT_TEXT_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:05.492717" elapsed="0.010003"/>
+<status status="PASS" start="2024-09-18T12:51:47.937878" elapsed="0.020066"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:05.502720" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[2]/h6' contains exact text 'Rendered output'.</msg>
+<msg time="2024-09-18T12:51:47.957944" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[2]/h6' contains exact text 'Rendered output'.</msg>
 <arg>${RENDERED_OUTPUT_TEXT_IN_SUBPAGE}</arg>
 <arg>Rendered output</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:05.502720" elapsed="0.012025"/>
+<status status="PASS" start="2024-09-18T12:51:47.957944" elapsed="0.039988"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:06.523759" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:48.999820" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:05.514745" elapsed="1.009014"/>
+<status status="PASS" start="2024-09-18T12:51:47.997932" elapsed="1.001888"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${UPLOAD_BUTTON_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:06.523759" elapsed="0.010028"/>
+<status status="PASS" start="2024-09-18T12:51:48.999820" elapsed="0.029999"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:06.543773" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[2]/button' is displayed.</msg>
+<msg time="2024-09-18T12:51:49.089985" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[2]/button' is displayed.</msg>
 <arg>${UPLOAD_BUTTON_IN_SUBPAGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:18:06.533787" elapsed="0.009986"/>
+<status status="PASS" start="2024-09-18T12:51:49.029819" elapsed="0.060166"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:07.564206" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:50.092865" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:06.543773" elapsed="1.020433"/>
+<status status="PASS" start="2024-09-18T12:51:49.089985" elapsed="1.002880"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:07.564206" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[2]/button'.</msg>
+<msg time="2024-09-18T12:51:50.092865" level="INFO">Clicking element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[2]/button'.</msg>
 <arg>${UPLOAD_BUTTON_IN_SUBPAGE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-04T16:18:07.564206" elapsed="0.044225"/>
+<status status="PASS" start="2024-09-18T12:51:50.092865" elapsed="0.098139"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:08.617690" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:51.196054" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:07.608431" elapsed="1.009259"/>
+<status status="PASS" start="2024-09-18T12:51:50.191004" elapsed="1.005050"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${UPLOADED_IMAGE_TEXT_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:08.617690" elapsed="0.013016"/>
+<status status="PASS" start="2024-09-18T12:51:51.196916" elapsed="0.029948"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:08.630706" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/h6' contains exact text 'Uploaded Image'.</msg>
+<msg time="2024-09-18T12:51:51.236892" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/h6' contains exact text 'Uploaded Image'.</msg>
 <arg>${UPLOADED_IMAGE_TEXT_IN_SUBPAGE}</arg>
 <arg>Uploaded Image</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:08.630706" elapsed="0.009998"/>
+<status status="PASS" start="2024-09-18T12:51:51.226864" elapsed="0.060977"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:09.641621" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:52.288640" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:08.640704" elapsed="1.000917"/>
+<status status="PASS" start="2024-09-18T12:51:51.287841" elapsed="1.000799"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${uploaded_an_image_TEXT_IN_SUBPAGE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:09.641621" elapsed="0.010007"/>
+<status status="PASS" start="2024-09-18T12:51:52.288640" elapsed="0.057456"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:09.651628" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/div' contains exact text 'Upload an image'.</msg>
+<msg time="2024-09-18T12:51:52.346096" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[2]/div' contains exact text 'Upload an image'.</msg>
 <arg>${uploaded_an_image_TEXT_IN_SUBPAGE}</arg>
 <arg>Upload an image</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:09.651628" elapsed="0.009994"/>
+<status status="PASS" start="2024-09-18T12:51:52.346096" elapsed="0.067100"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:10.667382" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:53.422553" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:09.661622" elapsed="1.005760"/>
+<status status="PASS" start="2024-09-18T12:51:52.413327" elapsed="1.009226"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${UPLOAD_IMAGE_CONTAINER}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:10.667382" elapsed="0.010006"/>
+<status status="PASS" start="2024-09-18T12:51:53.422553" elapsed="0.038062"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:10.687378" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]' is displayed.</msg>
+<msg time="2024-09-18T12:51:53.522874" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]' is displayed.</msg>
 <arg>${UPLOAD_IMAGE_CONTAINER}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:18:10.677388" elapsed="0.009990"/>
+<status status="PASS" start="2024-09-18T12:51:53.460615" elapsed="0.062259"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:11.695268" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:54.531748" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:10.687378" elapsed="1.007890"/>
+<status status="PASS" start="2024-09-18T12:51:53.522874" elapsed="1.008874"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${UPLOAD_IMAGE_LOGO_IN_CONTAINER}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:11.695268" elapsed="0.009996"/>
+<status status="PASS" start="2024-09-18T12:51:54.531748" elapsed="0.030080"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:11.720290" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]/i' is displayed.</msg>
+<msg time="2024-09-18T12:51:54.601816" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]/i' is displayed.</msg>
 <arg>${UPLOAD_IMAGE_LOGO_IN_CONTAINER}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:18:11.705264" elapsed="0.015026"/>
+<status status="PASS" start="2024-09-18T12:51:54.561828" elapsed="0.039988"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:12.727093" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:55.618460" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:11.720290" elapsed="1.006803"/>
+<status status="PASS" start="2024-09-18T12:51:54.611830" elapsed="1.006630"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${TEXT_IN_UPLOAD_IMAGE_CONTAINER}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:12.727093" elapsed="0.010009"/>
+<status status="PASS" start="2024-09-18T12:51:55.618460" elapsed="0.032100"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:12.737102" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]/span' contains exact text 'Drag and drop or select an image to upload'.</msg>
+<msg time="2024-09-18T12:51:55.650560" level="INFO">Verifying element 'xpath=/html/body/main/div/div[8]/div/div[1]/div[1]/div[2]/div[1]/span' contains exact text 'Drag and drop or select an image to upload'.</msg>
 <arg>${TEXT_IN_UPLOAD_IMAGE_CONTAINER}</arg>
 <arg>Drag and drop or select an image to upload</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-04T16:18:12.737102" elapsed="0.010025"/>
+<status status="PASS" start="2024-09-18T12:51:55.650560" elapsed="0.058095"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:13.747570" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:56.710422" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:12.747127" elapsed="1.000443"/>
+<status status="PASS" start="2024-09-18T12:51:55.708655" elapsed="1.001767"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LATEX_OUTPUT_CONTAINER}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-04T16:18:13.747570" elapsed="0.010000"/>
+<status status="PASS" start="2024-09-18T12:51:56.710422" elapsed="0.009995"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-04T16:18:13.767575" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[1]/textarea' is displayed.</msg>
+<msg time="2024-09-18T12:51:56.751459" level="INFO">Element 'xpath=/html/body/main/div/div[8]/div/div[2]/div[1]/textarea' is displayed.</msg>
 <arg>${LATEX_OUTPUT_CONTAINER}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-04T16:18:13.757570" elapsed="0.010005"/>
+<status status="PASS" start="2024-09-18T12:51:56.720417" elapsed="0.031042"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-04T16:18:14.768692" level="INFO">Slept 1 second.</msg>
+<msg time="2024-09-18T12:51:57.760358" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-04T16:18:13.767575" elapsed="1.001117"/>
+<status status="PASS" start="2024-09-18T12:51:56.751459" elapsed="1.008899"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:18:02.410268" elapsed="12.358424"/>
+<status status="PASS" start="2024-09-18T12:51:44.760851" elapsed="12.999507"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-09-04T16:18:14.768692" elapsed="2.161461"/>
+<status status="PASS" start="2024-09-18T12:51:57.760358" elapsed="2.183878"/>
 </kw>
-<status status="PASS" start="2024-09-04T16:17:35.995283" elapsed="40.934870"/>
+<status status="PASS" start="2024-09-18T12:51:02.374831" elapsed="57.569405"/>
 </test>
-<status status="PASS" start="2024-09-04T16:17:35.735210" elapsed="41.194943"/>
+<status status="PASS" start="2024-09-18T12:51:01.964103" elapsed="57.980133"/>
 </suite>
 <statistics>
 <total>
@@ -517,5 +686,21 @@
 </suite>
 </statistics>
 <errors>
+<msg time="2024-09-18T12:51:02.258004" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 4: Importing library 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\webdriver.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\webdriver.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages</msg>
+<msg time="2024-09-18T12:51:02.314833" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 87: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-09-18T12:51:02.344830" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\LLM_Metrics_LLM_Performance_Keywords.robot' on line 41: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-09-18T12:51:02.354831" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\User_Management_Departments_Keywords.robot' on line 72: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-09-18T12:51:02.364835" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\User_Management_Organisation_Keywords.robot' on line 66: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

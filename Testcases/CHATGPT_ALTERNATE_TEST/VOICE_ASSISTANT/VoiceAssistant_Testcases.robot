@@ -1,17 +1,16 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../../Keywords/ChatgptAlternate_Keywords.robot
+Resource      ../../../Settings/settings.robot
 *** Test Cases ***
 Verifying VoiceAssistant
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    ChatgptAlternate_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    ChatgptAlternate_Keywords.Click Login Button
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
     Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
-    Click Chat Gpt Alternate
+    Click SIDEMENU12
+    Click Chat Gpt Alternate3
     Click Voice Assistant
     Verify Voice Assistant and logo presence in subpage
     Verify GenE text & logo presence

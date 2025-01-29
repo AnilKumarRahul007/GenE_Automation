@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2025-01-06T18:01:34.265173" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Negative Login Page TESTCASES" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Negative_Login_Page_TESTCASES.robot">
+<test id="s1-s1-t1" name="Combined Negative Test Cases for Login Page" line="5">
+<kw name="Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Open Browser">
+<msg time="2025-01-06T18:01:36.750533" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${HEADLESS}</arg>
+<status status="FAIL" start="2025-01-06T18:01:36.749533" elapsed="0.001000">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-01-06T18:01:36.753531" elapsed="0.001001"/>
+</kw>
+<kw name="Verify Gen E Logo Presence" owner="Loginpage_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.756534" elapsed="0.001000"/>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:36.730986" elapsed="0.027548">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2025-01-06T18:01:36.775531" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-01-06T18:01:36.774534" elapsed="0.000997">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:36.719953" elapsed="0.056581">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<status status="FAIL" start="2025-01-06T18:01:34.592218" elapsed="2.189316"/>
+</suite>
+<status status="FAIL" start="2025-01-06T18:01:34.414604" elapsed="2.373925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Negative Login Page TESTCASES">Suites.Negative Login Page TESTCASES</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-06T18:01:35.856204" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:36.073879" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

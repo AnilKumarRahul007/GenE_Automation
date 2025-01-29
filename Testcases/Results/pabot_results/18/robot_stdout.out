@@ -1,0 +1,25 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Safe Digging Testcases                                                 
+==============================================================================
+Verify Safe Digging                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CUSTOM_ML_MODELS_TEST\Safe_Digging_Testcases.robot:5
+    T:  Verify Safe Digging    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CUSTOM_ML_MODELS_TEST\Safe_Digging_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
+------------------------------------------------------------------------------
+Suites.Safe Digging Testcases                                         | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\18\output.xml

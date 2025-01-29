@@ -1,190 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2024-09-02T17:59:50.281572" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2025-01-06T18:01:20.464225" rpa="false" schemaversion="5">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="Negative ForgotPassword Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot">
-<test id="s1-s1-t1" name="Verify GenE Logo In Forgot Password Page" line="7">
-<kw name="Forgot Password Link" owner="Forgotpassword_Keywords" type="SETUP">
-<kw name="Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-02T17:59:51.104710" level="INFO">Opening browser 'chrome' to base url 'https://gene-nextjs-dev.dtskill.com/signin'.</msg>
+<suite id="s1-s1" name="Chatwithlog Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\CHAT_WITH_LOG\Chatwithlog_Testcases.robot">
+<test id="s1-s1-t1" name="Verifying ChatwithLog" line="5">
+<kw name="Open Browser">
+<msg time="2025-01-06T18:01:23.854324" level="FAIL">No keyword with name 'Open Browser' found.</msg>
 <arg>${URL}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-02T17:59:51.104710" elapsed="7.239683"/>
+<arg>Chrome</arg>
+<status status="FAIL" start="2025-01-06T18:01:23.854324" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-02T17:59:58.344393" elapsed="0.276276"/>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-01-06T18:01:23.860395" elapsed="0.000000"/>
 </kw>
-<kw name="Verify Gen E Logo Presence" owner="Loginpage_Keywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${LOGO_LOCATOR}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-02T17:59:58.622670" elapsed="0.072372"/>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:23.862418" elapsed="0.002024"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-02T17:59:58.745571" level="INFO">Element 'xpath=/html/body/main/div/div/div/div[1]/div/div[1]/img' is displayed.</msg>
-<arg>${LOGO_LOCATOR}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-02T17:59:58.696042" elapsed="0.049529"/>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.866468" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:00.759131" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T17:59:58.746572" elapsed="2.012559"/>
+<kw name="Wait Until Location Is">
+<arg>${SUCCESS_URL}</arg>
+<arg>timeout=10s</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:23.868491" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-09-02T17:59:58.620669" elapsed="2.139463"/>
+<kw name="Location Should Be">
+<arg>${SUCCESS_URL}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:23.870511" elapsed="0.002021"/>
 </kw>
-<status status="PASS" start="2024-09-02T17:59:51.104710" elapsed="9.656423"/>
+<kw name="Click SIDEMENU7" owner="Chatwithlog_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.872532" elapsed="0.002021"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:00.763131" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[3]/a/span'.</msg>
-<arg>${FORGOT_PASSWORD_LINK}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-02T18:00:00.762132" elapsed="0.810555"/>
+<kw name="Click Chat Gpt Alternate" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.876574" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${EMAIL_VERIFY_PAGE_URL}</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2024-09-02T18:00:01.572687" elapsed="0.416343"/>
+<kw name="Click Chat with log" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.880614" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-09-02T17:59:51.104710" elapsed="10.884320"/>
+<kw name="Verify Chat with log and logo presence in subpage" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.882634" elapsed="0.000000"/>
 </kw>
-<kw name="Verify 'Email Verify' In Forgot Password Page" owner="Forgotpassword_Keywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${EMAIL_VERIFY_PRESENCE}</arg>
-<arg>timeout=4s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-02T18:00:01.989030" elapsed="0.183508"/>
+<kw name="Verify GenE text &amp; logo presence" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.884656" elapsed="0.002017"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:02.347586" level="INFO">Element 'xpath=//div[normalize-space()='Email Verify']' is displayed.</msg>
-<arg>${EMAIL_VERIFY_PRESENCE}</arg>
-<arg>timeout=4s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-02T18:00:02.172538" elapsed="0.175048"/>
+<kw name="Verify ChatContainer" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.888699" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:04.390386" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T18:00:02.347586" elapsed="2.043803"/>
+<kw name="Verify Options in the top right corner of the subpage" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.890720" elapsed="0.002022"/>
 </kw>
-<status status="PASS" start="2024-09-02T18:00:01.989030" elapsed="2.402359"/>
+<kw name="Verify all options are clickable" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.894762" elapsed="0.000000"/>
 </kw>
-<kw name="Verify Email Logo In Forgot Password Page" owner="Forgotpassword_Keywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${EMAIL_LOGO_IN_FORGOT_PASSWORD}</arg>
-<arg>timeout=4s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-02T18:00:04.392383" elapsed="0.356746"/>
+<kw name="Verify Ask a Question Container" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.896783" elapsed="0.000000"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:04.995830" level="INFO">Element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']' is displayed.</msg>
-<arg>${EMAIL_LOGO_IN_FORGOT_PASSWORD}</arg>
-<arg>timeout=4s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-02T18:00:04.749129" elapsed="0.246701"/>
+<kw name="Verify Right Menu" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:23.900827" elapsed="0.002022"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:07.013981" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T18:00:04.995830" elapsed="2.018151"/>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-01-06T18:01:23.902849" elapsed="0.002025"/>
 </kw>
-<status status="PASS" start="2024-09-02T18:00:04.392383" elapsed="2.621598"/>
-</kw>
-<kw name="Verify 'Enter Email Address' In Forgot Password Page" owner="Forgotpassword_Keywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${EMAIL_ADDRESS_IN_FORGOT_PASSWORD_PAGE}</arg>
-<arg>timeout=4s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-02T18:00:07.013981" elapsed="0.158988"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:07.465565" level="INFO">Element 'xpath=//input[@placeholder='Enter email address']' is displayed.</msg>
-<arg>${EMAIL_ADDRESS_IN_FORGOT_PASSWORD_PAGE}</arg>
-<arg>timeout=4s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-02T18:00:07.173970" elapsed="0.292594"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:09.504029" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T18:00:07.466564" elapsed="2.037465"/>
-</kw>
-<status status="PASS" start="2024-09-02T18:00:07.013981" elapsed="2.490048"/>
-</kw>
-<kw name="Verify 'Send Reset Link' In Forgot Password Page" owner="Forgotpassword_Keywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${SEND_REST_LINK_IN_FORGOT_PASSWORD}</arg>
-<arg>timeout=4s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-02T18:00:09.514031" elapsed="0.803909"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:12.373769" level="INFO">Element 'xpath=//button[normalize-space()='Send Reset Link']' is displayed.</msg>
-<arg>${SEND_REST_LINK_IN_FORGOT_PASSWORD}</arg>
-<arg>timeout=4s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-02T18:00:10.317940" elapsed="2.055829"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:14.413706" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T18:00:12.373769" elapsed="2.039937"/>
-</kw>
-<status status="PASS" start="2024-09-02T18:00:09.514031" elapsed="4.899675"/>
-</kw>
-<kw name="Wrong Email Address on Forgot Password" owner="Forgotpassword_Keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:14.423708" level="INFO">Typing text 'aslk0982da@laskdops' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[3]/div/form/div/input'.</msg>
-<arg>${EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-02T18:00:14.423708" elapsed="3.892547"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-02T18:00:18.318259" level="INFO">Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[3]/div/form/button'.</msg>
-<arg>${SUBMIT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-02T18:00:18.317257" elapsed="2.844567"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-02T18:00:24.183973" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-02T18:00:21.161824" elapsed="3.022149"/>
-</kw>
-<arg>aslk0982da@laskdops</arg>
-<status status="PASS" start="2024-09-02T18:00:14.413706" elapsed="9.770267"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-09-02T18:00:24.184971" elapsed="9.222316"/>
-</kw>
-<status status="PASS" start="2024-09-02T17:59:51.104710" elapsed="42.302577"/>
+<status status="FAIL" start="2025-01-06T18:01:23.830053" elapsed="0.076850">No keyword with name 'Open Browser' found.</status>
 </test>
-<status status="PASS" start="2024-09-02T17:59:50.391610" elapsed="43.016676"/>
+<status status="FAIL" start="2025-01-06T18:01:20.778316" elapsed="3.132637"/>
 </suite>
-<status status="PASS" start="2024-09-02T17:59:50.341611" elapsed="43.068679"/>
+<status status="FAIL" start="2025-01-06T18:01:20.602009" elapsed="3.313489"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Negative ForgotPassword Testcases">Suites.Negative ForgotPassword Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Chatwithlog Testcases">Suites.Chatwithlog Testcases</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-09-02T17:59:51.074709" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Keywords\Forgotpassword_Keywords.robot' on line 3: Resource file '..\..\Keywords\Loginpage_Keywords.robot' does not exist.</msg>
+<msg time="2025-01-06T18:01:22.240740" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\CHAT_WITH_LOG\Chatwithlog_Testcases.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:22.329909" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:23.009661" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

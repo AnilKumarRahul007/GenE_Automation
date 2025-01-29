@@ -1,35 +1,13 @@
-*** Settings ***
-Variables   ../Variables/Variables.py
-Resource    Loginpage_Keywords.robot
-Library  Collections
+#*** Settings ***
+#Variables   ../Variables/Variables.py
+#Resource    Loginpage_Keywords.robot
+#Library  Collections
 *** Keywords ***
-
-Fill Login Form
-    [Arguments]    ${email}    ${password}
-    Input Text    ${USERNAME_LOCATOR}    ${email}
-    Input Text    ${PASSWORD_LOCATOR}    ${password}
-
-Click Login Button
-    Click Element    ${LOGIN_BUTTON}
+Click SIDEMENU18
+    Wait Until Page Contains Element        ${SIDE_MENU}
+    Element Should Be Visible       ${SIDE_MENU}
+    Click Element       ${SIDE_MENU}
     Sleep   3s
-
-Click SIDEMENU
-    Click Element    ${SIDE_MENU}
-    Sleep   3s
-
-Verify all SIDEMENU OPTIONS
-    Wait Until Page Contains Element    ${SIDEMENU_OPTIONS}
-    Element Should Be Visible       ${SIDEMENU_OPTIONS}
-    Sleep   1s
-    Wait Until Page Contains Element    ${SUBCRIPTION_BOX}
-    Element Should Be Visible       ${SUBCRIPTION_BOX}
-    Sleep   1s
-    Wait Until Page Contains Element    ${USERIMAGE_IN_SUBCRIPTION_BOX}
-    Element Should Be Visible       ${USERIMAGE_IN_SUBCRIPTION_BOX}
-    Sleep   1s
-    Wait Until Page Contains Element    ${USERNAME_IN_SUBCRIPTION_BOX}
-    Element Should Be Visible       ${USERNAME_IN_SUBCRIPTION_BOX}
-    Sleep   1s
 
 Click LLM Metrics
     Wait Until Page Contains Element    ${LLM_METRICS_BOX}
@@ -39,6 +17,7 @@ Click LLM Metrics
     Element Should Be Visible       ${LLM_METRICS_BOX_LOGO}
     Sleep   1s
     Click Element   ${LLM_METRICS_BOX}
+    Sleep   2s
 
 Click LLM Performance
     Wait Until Page Contains Element    ${LLM_PERFORMANCE_BOX}
@@ -52,23 +31,7 @@ Click LLM Performance
     Location Should Be      ${LLM_PERFORMANCE__URL}
     Sleep   2s
 
-Verify Table Column
-    [Arguments]    ${table_locator}    ${expected_column}
-    ${header_row}    Get Element Attribute    ${table_locator}//tr[1]    outerHTML
-    Log    Header Row: ${header_row}
-    ${column_present}    Run Keyword And Return Status    Check Column Exists    ${table_locator}    ${expected_column}
-    Run Keyword If    '${column_present}'=='False'    Fail    Column '${expected_column}' not found in the table
-
-Check Column Exists
-    [Arguments]    ${table_locator}    ${expected_column}
-    ${column_list}    Get WebElements    ${table_locator}//tr[1]//th
-    FOR    ${column}    IN    @{column_list}
-        ${column_text}    Get Text    ${column}
-        Run Keyword If    '${column_text}' == '${expected_column}'    Return From Keyword    True
-    END
-    [Return]    False
-
-Verify Table
+Verify Table in Performance sub page
     Wait Until Element Is Visible    ${LLM_PERFORMANCE_TABLE}    10s
     Verify Table Column    ${LLM_PERFORMANCE_TABLE}    ${COLUMN1_IN_LLM_PERFORMANCE_TABLE}
     Verify Table Column    ${LLM_PERFORMANCE_TABLE}    ${COLUMN2_IN_LLM_PERFORMANCE_TABLE}
@@ -258,8 +221,8 @@ Verify summary box
     Element Should Be Visible       ${EXPLANATION_IN_POLITENESS}
     Sleep   2s
 
-
 Scroll Element
     [Arguments]    ${element_locator}    ${x}    ${y}
     ${element}    Get WebElement    ${element_locator}
-    Execute JavaScript    arguments[0].scrollTo(${x}, ${y});    ${element}
+    Execute JavaScript    arguments[0].scrollIntoView();    ${element}
+    Execute JavaScript    window.scrollBy(${x}, ${y});

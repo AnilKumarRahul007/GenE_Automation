@@ -1,10 +1,9 @@
 *** Settings ***
-Resource    ../../Settings/settings.robot
-Resource    ../../Keywords/Forgotpassword_Keywords.robot
-Resource    ../../Keywords/Loginpage_Keywords.robot
+#Resource    ../../Settings/settings.robot
+#Resource    ../../Keywords/Forgotpassword_Keywords.robot
+#Resource    ../../Keywords/Loginpage_Keywords.robot
 Library      SeleniumLibrary
-
-
+Resource      ../../Settings/settings.robot
 *** Test Cases ***
 VERIFY FORGOT PASSWORD FUNCTIONALITY
     [Setup]  Forgot Password Link

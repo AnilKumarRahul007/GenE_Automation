@@ -1,0 +1,25 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Sai-Script Distro Testcases                                            
+==============================================================================
+Verify Sai- Script Distro                                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\AI_AGENTS_TEST\SAI-SCRIPT_DISTRO_TEST\Sai-Script_Distro_Testcases.robot:5
+    T:  Verify Sai- Script Distro    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\AI_AGENTS_TEST\SAI-SCRIPT_DISTRO_TEST\Sai-Script_Distro_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
+------------------------------------------------------------------------------
+Suites.Sai-Script Distro Testcases                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\19\output.xml

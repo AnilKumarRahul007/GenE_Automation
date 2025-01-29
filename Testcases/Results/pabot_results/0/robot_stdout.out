@@ -1,14 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.ChatgptAlternate Testcases                                             
+Suites.Buffer Memory Testcases                                                
 ==============================================================================
-Verifying ChatgptAlternate                                            | PASS |
+Verifying BufferMemory                                                  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\BUFFER_MEMORY\Buffer_Memory_Testcases.robot:5
+    T:  Verifying BufferMemory    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CHATGPT_ALTERNATE_TEST\BUFFER_MEMORY\Buffer_Memory_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
 ------------------------------------------------------------------------------
-Suites.ChatgptAlternate Testcases                                     | PASS |
-1 test, 1 passed, 0 failed
+Suites.Buffer Memory Testcases                                        | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\0\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\0\output.xml

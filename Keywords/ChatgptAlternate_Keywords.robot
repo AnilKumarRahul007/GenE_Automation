@@ -1,19 +1,17 @@
-*** Settings ***
-Variables   ../Variables/Variables.py
-Resource    Loginpage_Keywords.robot
+#*** Settings ***
+#Variables   ../Variables/Variables.py
+#Resource    Loginpage_Keywords.robot
 *** Keywords ***
-
-Fill Login Form
-    [Arguments]    ${email}    ${password}
-    Input Text    ${USERNAME_LOCATOR}    ${email}
-    Input Text    ${PASSWORD_LOCATOR}    ${password}
-
-Click Login Button
-    Click Element    ${LOGIN_BUTTON}
+Click SIDEMENU5
+    Wait Until Page Contains Element        ${SIDE_MENU}
+    Element Should Be Visible       ${SIDE_MENU}
+    Click Element       ${SIDE_MENU}
     Sleep   3s
 
 Click SIDEMENU
-    Click Element    ${SIDE_MENU}
+    Wait Until Page Contains Element        ${SIDE_MENU}
+    Element Should Be Visible       ${SIDE_MENU}
+    Click Element       ${SIDE_MENU}
     Sleep   3s
 
 Verify all SIDEMENU OPTIONS
@@ -119,7 +117,6 @@ Click Chat with log
     Wait Until Location Is      ${CHAT_WITH_LOG_URL}       timeout=5s
     Location Should Be      ${CHAT_WITH_LOG_URL}
     Sleep   1s
-
 
 Verify Chat with log and logo presence in subpage
     Wait Until Page Contains Element    ${CHAT_WITH_LOG_IN_SUBPAGE}
@@ -230,17 +227,6 @@ Verify Voice Assistant and logo presence in subpage
     Sleep    2s
     Wait Until Page Contains Element    ${VOICE_ASSISTANT_LOGO_IN_SUBPAGE}
     Element Should Be Visible       ${VOICE_ASSISTANT_LOGO_IN_SUBPAGE}
-    Sleep   2s
-
-Verify GenE text & logo presence
-    Wait Until Page Contains Element    ${E_LOGO_IN_GENE}
-    Element Should Be Visible       ${E_LOGO_IN_GENE}
-    Sleep   2s
-    Wait Until Page Contains Element    ${GENE_TEXT_IN_PRIVATE_GPT}
-    Element Should Be Visible       ${GENE_TEXT_IN_PRIVATE_GPT}
-    Sleep   2s
-    Wait Until Page Contains Element        ${GENE_LOGO_IN_SUBPAGE_OF_PRIVATEGPT}
-    Element Should Be Visible       ${GENE_LOGO_IN_SUBPAGE_OF_PRIVATEGPT}
     Sleep   2s
 
 Verify ChatContainer

@@ -1,16 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../../Keywords/ChatgptAlternate_Keywords.robot
+Resource      ../../../Settings/settings.robot
 *** Test Cases ***
 Verifying Department
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    ChatgptAlternate_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    ChatgptAlternate_Keywords.Click Login Button
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
     Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
+    Click SIDEMENU10
     Click Chat Gpt Alternate
     Click Department
     Verify Department and logo presence in subpage

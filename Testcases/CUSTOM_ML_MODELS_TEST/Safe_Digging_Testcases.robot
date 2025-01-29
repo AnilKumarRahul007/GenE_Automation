@@ -1,16 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../Keywords/Custom_ML_Models_SafeDigging_Keywords.robot
+Resource      ../../Settings/settings.robot
 *** Test Cases ***
-Verify Decoding
+Verify Safe Digging
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    Custom_ML_Models_SafeDigging_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    Custom_ML_Models_SafeDigging_Keywords.Click Login Button
-    Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
+    Wait Until Location Is    ${SUCCESS_URL}    timeout=20s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
+    Click SIDEMENU13
     Click Custom ML Models
     Click Safe Digging
     Verify Drag and drop or select a PDF to Upload

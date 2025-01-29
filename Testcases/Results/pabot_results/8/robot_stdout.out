@@ -1,14 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.YourprivateGPT Testcase                                                
+Suites.ESB Notes Action Tagging Testcases                                     
 ==============================================================================
-Verifying YourprivateGPT                                              | PASS |
+Verify ESB Notes Action Tagging                                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FINE_TUNED_MODELS\ESB_NOTES_ACTION_TAGGING_TEST\ESB_Notes_Action_Tagging_Testcases.robot:5
+    T:  Verify ESB Notes Action Tagging    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FINE_TUNED_MODELS\ESB_NOTES_ACTION_TAGGING_TEST\ESB_Notes_Action_Tagging_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
 ------------------------------------------------------------------------------
-Suites.YourprivateGPT Testcase                                        | PASS |
-1 test, 1 passed, 0 failed
+Suites.ESB Notes Action Tagging Testcases                             | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\8\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\8\output.xml

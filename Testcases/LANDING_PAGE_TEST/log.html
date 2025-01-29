@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.0.1 (Python 3.10.2 on win32)" name="Generator">
+<meta content="Robot Framework 7.1.1 (Python 3.10.2 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -1252,58 +1252,48 @@ window.stats = (function () {
             });
     }
     function calculatePercents(total, passed, failed, skipped) {
-        if (total == 0) {
+        if (total == 0)
             return [0.0, 0.0, 0.0];
-        }
         var pass = 100.0 * passed / total;
         var skip = 100.0 * skipped / total;
         var fail = 100.0 * failed / total;
         if (pass > 0 && pass < 0.1)
-            pass = 0.1
+            pass = 0.1;
         if (fail > 0 && fail < 0.1)
-            fail = 0.1
+            fail = 0.1;
         if (skip > 0 && skip < 0.1)
-            skip = 0.1
+            skip = 0.1;
         if (pass > 99.95 && pass < 100)
-            pass = 99.9
+            pass = 99.9;
         if (fail > 99.95 && fail < 100)
-            fail = 99.9
+            fail = 99.9;
         if (skip > 99.95 && skip < 100)
-            skip = 99.9
-        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
+            skip = 99.9;
+        return [round1(pass), round1(skip), round1(fail)];
     }
     function calculateWidths(num1, num2, num3) {
         if (num1 + num2 + num3 === 0)
             return [0.0, 0.0, 0.0];
         // Make small percentages better visible
         if (num1 > 0 && num1 < 1)
-            num1 = 1
+            num1 = 1.0;
         if (num2 > 0 && num2 < 1)
-            num2 = 1
+            num2 = 1.0;
         if (num3 > 0 && num3 < 1)
-            num3 = 1
+            num3 = 1.0;
         // Handle situation where some are rounded up
         while (num1 + num2 + num3 > 100) {
-            if (num1 > num2 && num1 > num3)
-                num1 -= 0.1;
-            else if (num2 > num1 && num2 > num3)
-                num2 -= 0.1;
-            else if (num3 > num1 && num3 > num2)
-                num3 -= 0.1;
-            else if (num1 > num3 && num1 == num2) {
-                num1 -= 0.1;
-                num2 -= 0.1;
-            }
-            else if (num1 > num2 && num1 == num3) {
-                num1 -= 0.1;
-                num3 -= 0.1;
-            }
-            else if (num2 > num1 && num2 == num3) {
-                num2 -= 0.1;
-                num3 -= 0.1;
-            }
+            if (num1 >= num2 && num1 >= num3)
+                num1 = round1(num1 - 0.1);
+            else if (num2 >= num1 && num2 >= num3)
+                num2 = round1(num2 - 0.1);
+            else
+                num3 = round1(num3 - 0.1);
         }
-        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
+        return [num1, num2, num3];
+    }
+    function round1(num) {
+        return Math.round(num*10) / 10;
     }
     return {
         Statistics: Statistics
@@ -2081,25 +2071,25 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,54559],[],[[4,0,0,[],[1,321,54238],[[0,5,6,0,7,8,0,0,[1,321,2427],[[331,2,9]]],[0,10,6,0,11,0,0,0,[1,2748,27],[]],[0,12,13,0,0,14,0,0,[1,2774,22607],[[0,15,13,0,0,0,0,0,[1,2774,2064],[[0,16,6,0,17,18,0,0,[1,2774,23],[]],[0,19,6,0,20,21,0,0,[1,2798,31],[[2823,2,22]]],[0,23,24,0,25,26,0,0,[1,2828,2010],[[4838,2,27]]]]],[0,28,13,0,0,0,0,0,[1,4838,4040],[[0,16,6,0,17,29,0,0,[1,4838,10],[]],[0,19,6,0,20,30,0,0,[1,4848,20],[[4868,2,31]]],[0,23,24,0,25,32,0,0,[1,4868,4010],[[8878,2,33]]]]],[0,34,13,0,0,0,0,0,[1,8878,4041],[[0,16,6,0,17,35,0,0,[1,8879,20],[]],[0,19,6,0,20,36,0,0,[1,8900,18],[[8918,2,37]]],[0,23,24,0,25,32,0,0,[1,8918,4001],[[12919,2,33]]]]],[0,38,13,0,0,0,0,0,[1,12919,4028],[[0,16,6,0,17,39,0,0,[1,12919,10],[]],[0,19,6,0,20,40,0,0,[1,12929,10],[[12939,2,31]]],[0,23,24,0,25,32,0,0,[1,12939,4007],[[16947,2,33]]]]],[0,41,13,0,0,0,0,0,[1,16947,2046],[[0,16,6,0,17,42,0,0,[1,16947,20],[]],[0,19,6,0,20,43,0,0,[1,16967,20],[[16987,2,44]]],[0,23,24,0,25,26,0,0,[1,16987,2006],[[18993,2,27]]]]],[0,45,13,0,0,0,0,0,[1,18993,2031],[[0,16,6,0,17,46,0,0,[1,18993,10],[]],[0,19,6,0,20,47,0,0,[1,19003,20],[[19023,2,48]]],[0,23,24,0,25,26,0,0,[1,19023,2001],[[21024,2,27]]]]],[0,49,13,0,0,0,0,0,[1,21024,2038],[[0,16,6,0,17,50,0,0,[1,21024,10],[]],[0,19,6,0,20,51,0,0,[1,21034,20],[[21054,2,52]]],[0,23,24,0,25,26,0,0,[1,21054,2008],[[23062,2,27]]]]],[0,53,13,0,0,0,0,0,[1,23062,2033],[[0,16,6,0,17,54,0,0,[1,23062,10],[]],[0,19,6,0,20,54,0,0,[1,23072,20],[[23092,2,55]]],[0,23,24,0,25,26,0,0,[1,23092,2002],[[25094,2,27]]]]],[0,56,6,0,57,58,0,0,[1,25094,170],[[25094,2,59]]],[0,56,6,0,57,60,0,0,[1,25264,117],[[25264,2,61]]]]],[0,62,13,0,0,0,0,0,[1,25381,3054],[[0,63,6,0,64,65,0,0,[1,25381,50],[[25381,2,66]]],[0,23,24,0,25,67,0,0,[1,25431,3004],[[28435,2,68]]]]],[0,69,6,0,70,71,0,0,[1,28436,7],[]],[0,72,6,0,73,74,0,0,[1,28443,7],[[28450,2,75]]],[0,76,13,0,0,0,0,0,[1,28450,2027],[[0,16,6,0,17,77,0,0,[1,28450,13],[]],[0,19,6,0,20,78,0,0,[1,28463,12],[[28475,2,79]]],[0,23,24,0,25,26,0,0,[1,28475,2002],[[30478,2,27]]]]],[0,80,13,0,0,0,0,0,[1,30478,2043],[[0,16,6,0,17,81,0,0,[1,30478,20],[]],[0,19,6,0,20,82,0,0,[1,30498,20],[[30518,2,83]]],[0,23,24,0,25,26,0,0,[1,30518,2003],[[32520,2,27]]]]],[0,84,13,0,0,0,0,0,[1,32520,2045],[[0,16,6,0,17,85,0,0,[1,32520,20],[]],[0,19,6,0,20,86,0,0,[1,32540,20],[[32560,2,87]]],[0,23,24,0,25,26,0,0,[1,32560,2005],[[34565,2,27]]]]],[0,88,13,0,0,0,0,0,[1,34565,4175],[[0,16,6,0,17,89,0,0,[1,34565,20],[]],[0,19,6,0,20,90,0,0,[1,34585,50],[[34635,2,91]]],[0,23,24,0,25,26,0,0,[1,34635,2005],[[36640,2,27]]],[0,16,6,0,17,92,0,0,[1,36640,30],[]],[0,19,6,0,20,93,0,0,[1,36670,50],[[36720,2,94]]],[0,23,24,0,25,26,0,0,[1,36730,2010],[[38740,2,27]]]]],[0,95,13,0,0,0,0,0,[1,38740,4154],[[0,16,6,0,17,96,0,0,[1,38740,40],[]],[0,19,6,0,20,97,0,0,[1,38780,60],[[38840,2,98]]],[0,23,24,0,25,26,0,0,[1,38840,2006],[[40846,2,27]]],[0,16,6,0,17,99,0,0,[1,40846,20],[]],[0,19,6,0,20,100,0,0,[1,40866,20],[[40886,2,101]]],[0,23,24,0,25,26,0,0,[1,40886,2007],[[42893,2,27]]]]],[0,102,13,0,0,0,0,0,[1,42893,3216],[[0,63,6,0,64,103,0,0,[1,42893,205],[[42893,2,104]]],[0,23,24,0,25,67,0,0,[1,43100,3009],[[46109,2,68]]]]],[0,72,6,0,73,105,0,0,[1,46110,6],[[46117,2,75]]],[0,106,13,0,0,0,0,0,[1,46117,3056],[[0,63,6,0,64,107,0,0,[1,46118,49],[[46118,2,108]]],[0,23,24,0,25,67,0,0,[1,46166,3006],[[49172,2,68]]]]],[0,109,13,0,0,0,0,0,[1,49172,3169],[[0,63,6,0,64,110,0,0,[1,49172,166],[[49172,2,111]]],[0,23,24,0,25,67,0,0,[1,49338,3003],[[52341,2,68]]]]],[0,72,6,0,73,112,0,0,[1,52341,0],[[52341,2,113]]],[0,114,6,0,115,0,0,0,[1,52341,2217],[]]]]],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,15300],[],[[4,0,0,[],[1,384,14915],[[0,5,6,0,7,8,0,0,[1,384,2606],[[384,2,9]]],[0,10,6,0,11,0,0,0,[1,2991,35],[]],[0,12,13,0,0,14,0,0,[1,3028,822],[[0,15,6,0,16,17,0,0,[1,3030,662],[[3030,2,18]]],[0,15,6,0,16,19,0,0,[1,3694,156],[[3694,2,20]]]]],[0,21,13,0,0,0,0,0,[1,3860,2100],[[0,22,6,0,23,24,0,0,[1,3862,89],[[3862,2,25]]],[0,26,27,0,28,29,0,0,[1,3952,2009],[[5960,2,30]]]]],[0,31,6,0,32,33,0,0,[1,5960,0],[]],[0,34,6,0,35,36,0,0,[1,5960,0],[[5960,2,37]]],[0,38,39,0,0,0,0,0,[1,5971,2028],[[0,40,6,0,41,42,0,0,[1,5971,10],[]],[0,43,6,0,44,45,0,0,[1,5981,10],[[5991,2,46]]],[0,26,27,0,28,29,0,0,[1,5991,2008],[[7999,2,30]]]]],[0,47,39,0,0,0,0,0,[1,7999,2031],[[0,40,6,0,41,48,0,0,[1,7999,10],[]],[0,43,6,0,44,49,0,0,[1,8009,13],[[8022,2,50]]],[0,26,27,0,28,29,0,0,[1,8022,2008],[[10030,2,30]]]]],[0,51,39,0,0,0,0,0,[1,10030,3069],[[0,22,6,0,23,52,0,0,[1,10030,59],[[10030,2,53]]],[0,26,27,0,28,54,0,0,[1,10090,3009],[[13099,2,55]]]]],[0,34,6,0,35,56,0,0,[1,13099,0],[[13099,2,57]]],[0,58,6,0,59,0,0,0,[1,13099,2201],[]]]]],[],[1,1,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Landingpage Testcase","*C:\\Users\\ANIL KUMAR RAHUL\\PycharmProjects\\GenE_Automation\\Testcases\\LANDING_PAGE_TEST\\Landingpage_Testcase.robot","*Landingpage_Testcase.robot","*Verify UI and Navigation","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${URL}    Chrome","*Opening browser 'Chrome' to base url '<a href=\"https://gene-nextjs-dev.dtskill.com/signin\">https://gene-nextjs-dev.dtskill.com/signin\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Fill Login Form","*LandingPage_Keywords","*${USERNAME}    ${PASSWORD}","*Verify Gen E Logo Presence","*Wait Until Page Contains Element","*<p>Waits until the element <code>locator\x3c/code> appears on the current page.\x3c/p>","*${LOGO_LOCATOR}    timeout=5s","*Element Should Be Visible","*<p>Verifies that the element identified by <code>locator\x3c/code> is visible.\x3c/p>","*${LOGO_LOCATOR}","*Element 'xpath=/html/body/main/div/div/div/div[1]/div/div[1]/img' is displayed.","*Sleep","*BuiltIn","*<p>Pauses the test executed for the given time.\x3c/p>","*2s","*Slept 2 seconds.","*Verify Email Logo Presence","*${EMAIL_LOGO}    timeout=5s","*${EMAIL_LOGO}","*Element 'xpath=//i[@class='fa-sharp fa-regular fa-envelope']' is displayed.","*4s","*Slept 4 seconds.","*Verify Email Text Presence","*${EMAIL_TEXT_PRESENCE}    timeout=5s","*${EMAIL_TEXT_PRESENCE}","*Element 'xpath=//input[@placeholder='Enter email address']' is displayed.","*Verify Password Logo Presence","*${PASSWORD_LOGO}    timeout=5s","*${PASSWORD_LOGO}","*Verify Password Text Presence","*${PASSWORD_TEXT}    timeout=3s","*${PASSWORD_TEXT}","*Element 'xpath=//i[@class='fa-sharp fa-regular fa-lock']' is displayed.","*Verify Forgot Password Presence","*${FORGOT_PASSWORD_PRESENCE}    timeout=3s","*${FORGOT_PASSWORD_PRESENCE}","*Element 'xpath=//div[@class='forget-text']' is displayed.","*Verify Sign In Presence","*${SIGN_IN_PRESENCE}    timeout=2s","*${SIGN_IN_PRESENCE}","*Element 'xpath=//button[normalize-space()='Sign In']' is displayed.","*Verify Sign Up Presence","*${SIGN_UP_PRESENCE}    timeout=2s","*Element 'xpath=//span[normalize-space()='Sign Up']' is displayed.","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${USERNAME_LOCATOR}    ${email}","*Typing text 'varun.datt@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.","*${PASSWORD_LOCATOR}    ${password}","*Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.","*Click Login Button","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*${LOGIN_BUTTON}","*Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.","*3s","*Slept 3 seconds.","*Wait Until Location Is","*<p>Waits until the current URL is <code>expected\x3c/code>.\x3c/p>","*${SUCCESS_URL}    timeout=10s","*Location Should Be","*<p>Verifies that the current URL is exactly <code>url\x3c/code>.\x3c/p>","*${SUCCESS_URL}","*Current location is '<a href=\"https://gene-nextjs-dev.dtskill.com/dashboard\">https://gene-nextjs-dev.dtskill.com/dashboard\x3c/a>'.","*Verify Gen E Logo Presence in landing page","*${LOGO_LOCATOR_LANDING_PAGE}    timeout=5s","*${LOGO_LOCATOR_LANDING_PAGE}","*Element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[2]/a/img' is displayed.","*Verify DASHBOARD presence","*${DASHBOARD_PRESENCE}    timeout=5s","*${DASHBOARD_PRESENCE}","*Element 'xpath=//div[@class='chat-box-section mt-60 table-container pt--20 pl--20']' is displayed.","*Check for two options available on the top menu lists on the Dashboard","*${TWO_OPTIONS_IN_LANDING_PAGE}    timeout=5s","*${TWO_OPTIONS_IN_LANDING_PAGE}","*Element 'xpath=/html/body/main/div/header/div/div/div[2]/nav/ul' is displayed.","*Verify HOME and CONNECT OPTIONS","*${HOME_OPTION_IN_LANDING_PAGE}    timeout=5s","*${HOME_OPTION_IN_LANDING_PAGE}","*Element 'xpath=/html/body/main/div/header/div/div/div[2]/nav/ul/li[1]/a' is displayed.","*${CONNECT_OPTION_IN_LANDING_PAGE}    timeout=5s","*${CONNECT_OPTION_IN_LANDING_PAGE}","*Element 'xpath=/html/body/main/div/header/div/div/div[2]/nav/ul/li[2]/a' is displayed.","*Verify USER DP/EMAIL/NAME presence","*${USER_DP}    timeout=5s","*${USER_DP}","*Element 'xpath=//div[@class='inner d-flex align-items-center']//img[@alt='user']' is displayed.","*${USER_EMAIL_PRESENCE}    timeout=5s","*${USER_EMAIL_PRESENCE}","*Element 'xpath=/html/body/main/div/header/div/div/div[3]/div/div[2]/div[1]' is displayed.","*Click HOME","*xpath=/html/body/main/div/header/div/div/div[2]/nav/ul/li[1]/a","*Clicking element 'xpath=/html/body/main/div/header/div/div/div[2]/nav/ul/li[1]/a'.","*${home_URL}","*Click SIDEMENU","*${SIDE_MENU}","*Clicking element 'xpath=/html/body/main/div/header/div/div/div[1]/div/div[1]/button/i'.","*Click PRIVATEGPT","*${PRIVATE_GPT}","*Clicking element 'xpath=/html/body/main/div/div[1]/div/div[1]/div/div/nav/div[1]/ul/li[1]/a/span'.","eNqdy8ENgCAMAMBVDH/o3yC7VFsBRSC0IY7vDt7/PC5p8LmZpNplBYhc2VZ+9RJLPB2p3LkUd7QHCCXtDQdBH3miso1dTfhdPWD4APjvL4A=","eNqdyzEOgCAMAMCvEBcn6G7UxZdUqYIikLYSn+8fvP2Wh5mymlQ21FiyiWL6EU1g2qcuqFYZAA7KZDO9eor11JxXuWJKbis3eJSwFmQPlWNDJXtU7ebfdQSce/cBmB43dA==","*Close Browser","*<p>Closes the current browser.\x3c/p>","eNqNkM1Ow0AMhO99Ct8CBwKot9wiCLQiDVF/kCqthDYbt13YrKO1iyhPz7aUS8SBm/XNjMZ2EQIFsB421iEkd5laMQZWeTUt4Wk1y+cwzyerUtUHs9OhqwO9oRFWj+iL13wv1Gmx5NUCRazfsuLzkAZqSBIgD856hHEGMWyQOarwoYPVTaz86U3T65cz4QQ2OsI2g2nXU5B/22fU7h1WJA+0921xvCyDiqA7cfC6wzZmk9EyaIONNu9w0RELBDToBYx2DpxmucxGEIMeR/V6OXmu6nw5OaL4nfogO/Lj2xu1MMH28RGnM1P8xKGh/53SL9sPxfuy5CFzthmgPxyKreBVH5fXW+Rve0+XLg=="]);
+window.output["strings"] = window.output["strings"].concat(["*","*Landingpage Testcase","*C:\\Users\\ANIL KUMAR RAHUL\\PycharmProjects\\GenE Automation\\GenE_Automation\\Testcases\\LANDING_PAGE_TEST\\Landingpage_Testcase.robot","*Landingpage_Testcase.robot","*Verify Landing page","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${URL}    Chrome","*Opening browser 'Chrome' to base url '<a href=\"https://genedev.dtskill.com/\">https://genedev.dtskill.com/\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Fill Login Form","*Loginpage_Keywords","*${USERNAME}    ${PASSWORD}","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${USERNAME_LOCATOR}    ${email}","*Typing text 'varun.datt@dtskill.com' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[1]/input'.","*${PASSWORD_LOCATOR}    ${password}","*Typing text '123456' into text field 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/div[2]/input'.","*Click Login Button","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*${LOGIN_BUTTON}","*Clicking element 'xpath=/html/body/main/div/div/div/div[1]/div/div[2]/div[1]/form/button'.","*Sleep","*BuiltIn","*<p>Pauses the test executed for the given time.\x3c/p>","*2s","*Slept 2 seconds.","*Wait Until Location Is","*<p>Waits until the current URL is <code>expected\x3c/code>.\x3c/p>","*${SUCCESS_URL}    timeout=10s","*Location Should Be","*<p>Verifies that the current URL is exactly <code>url\x3c/code>.\x3c/p>","*${SUCCESS_URL}","*Current location is '<a href=\"https://genedev.dtskill.com/home\">https://genedev.dtskill.com/home\x3c/a>'.","*Verify Gen E Logo Presence in landing page","*LandingPage_Keywords","*Wait Until Page Contains Element","*<p>Waits until the element <code>locator\x3c/code> appears on the current page.\x3c/p>","*${LOGO_LOCATOR_LANDING_PAGE}    timeout=5s","*Element Should Be Visible","*<p>Verifies that the element identified by <code>locator\x3c/code> is visible.\x3c/p>","*${LOGO_LOCATOR_LANDING_PAGE}","*Element 'xpath=/html/body/main/div[1]/div/div[1]/a/img' is displayed.","*Verify DASHBOARD presence","*${DASHBOARD_PRESENCE}    timeout=5s","*${DASHBOARD_PRESENCE}","*Element 'xpath=/html/body/main/div[1]/div' is displayed.","*Click USER","*xpath=/html/body/main/div[1]/div/a/div","*Clicking element 'xpath=/html/body/main/div[1]/div/a/div'.","*3s","*Slept 3 seconds.","*${home_URL}","*Current location is '<a href=\"https://genedev.dtskill.com/profile-details\">https://genedev.dtskill.com/profile-details\x3c/a>'.","*Close Browser","*<p>Closes the current browser.\x3c/p>","*Error in file 'C:\\Users\\ANIL KUMAR RAHUL\\PycharmProjects\\GenE Automation\\GenE_Automation\\Keywords\\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:54","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:55","fail":0,"id":"s1","label":"Landingpage Testcase","name":"Landingpage Testcase","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:15","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:15","fail":0,"id":"s1","label":"Landingpage Testcase","name":"Landingpage Testcase","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [[300,4,116]];
+window.output["errors"] = [[340,3,60]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1724398944040;
+window.output["baseMillis"] = 1738153055620;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 54588;
+window.output["generated"] = 15316;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;

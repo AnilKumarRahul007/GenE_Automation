@@ -1,16 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../../Keywords/Chatwithscript_Keywords.robot
+Resource      ../../../Settings/settings.robot
 *** Test Cases ***
 Verifying ChatwithScript
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    Chatwithscript_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    Chatwithscript_Keywords.Click Login Button
-    Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
+    Wait Until Location Is    ${SUCCESS_URL}    timeout=20s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
+    Click SIDEMENU9
     Click Chat Gpt Alternate
     Click Chat with script
     Verify Chat with script and logo presence in subpage

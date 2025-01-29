@@ -1,10 +1,8 @@
 *** Settings ***
 Resource    ../../Settings/settings.robot
-Resource    ../../Keywords/SignUpPage_Keywords.robot
-Resource    ../../Keywords/Loginpage_Keywords.robot
 Library      SeleniumLibrary
 *** Test Cases ***
-Checking Negative Cases
+Checking Negative Signup Cases
     [Setup]  Open Sign Up Page
     Sleep    3s
     # Test Case 2: Verify GenE Logo Presence

@@ -1,14 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Chatwithlog Testcases                                                  
+Suites.Handwritten OCR Testcases                                              
 ==============================================================================
-Verifying ChatwithLog                                                 | PASS |
+Verify Handwritten OCR                                                  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\AI_AGENTS_TEST\HANDWRITTEN_OCR_TEST\Handwritten_OCR_Testcases.robot:5
+    T:  Verify Handwritten OCR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\AI_AGENTS_TEST\HANDWRITTEN_OCR_TEST\Handwritten_OCR_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
 ------------------------------------------------------------------------------
-Suites.Chatwithlog Testcases                                          | PASS |
-1 test, 1 passed, 0 failed
+Suites.Handwritten OCR Testcases                                      | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\12\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\12\output.xml

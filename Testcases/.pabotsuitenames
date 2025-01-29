@@ -1,20 +1,29 @@
-datasources:552f41b1e865111367e9e333af439b0c3e1d5179
+datasources:b0078885077a8f13d3aa18cfba93242c189ca4e3
 commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
 suitesfrom:no-suites-from-option
-file:1e2a5eab6f8a930cfb415f087879cbb1930b17a4
+file:7e6d5fd80d6f8357dae4c6638c8082d8f960ca74
+--suite Suites.Buffer Memory Testcases
 --suite Suites.ChatgptAlternate Testcases
+--suite Suites.ChatwithMF4 Testcases
+--suite Suites.Chatwithcode Testcases
+--suite Suites.Chatwithlog Testcases
+--suite Suites.Chatwithscript Testcases
+--suite Suites.Decoding Testcases
+--suite Suites.Department Testcases
+--suite Suites.ESB Notes Action Tagging Testcases
+--suite Suites.Email Classification Testcases
+--suite Suites.Email Extraction Testcases
 --suite Suites.Forgotpassword Testcases
+--suite Suites.Handwritten OCR Testcases
 --suite Suites.Landingpage Testcase
 --suite Suites.Loginpage Testcases
 --suite Suites.Negative ForgotPassword Testcases
 --suite Suites.Negative Login Page TESTCASES
 --suite Suites.Negative SignUp Page Testcases
+--suite Suites.Safe Digging Testcases
+--suite Suites.Sai-Script Distro Testcases
+--suite Suites.Salesforce KB Explorer Testcases
 --suite Suites.SignUpPage Testcase
---suite Suites.YourprivateGPT Testcase
---suite Suites.Buffer Memory Testcases
---suite Suites.ChatwithMF4 Testcases
---suite Suites.Chatwithcode Testcases
---suite Suites.Chatwithlog Testcases
---suite Suites.Chatwithscript Testcases
---suite Suites.Department Testcases
+--suite Suites.Summary Buffer Testcases
 --suite Suites.VoiceAssistant Testcases
+--suite Suites.YourprivateGPT Testcase

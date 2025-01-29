@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2025-01-06T18:01:39.356412" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="YourprivateGPT Testcase" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\YOUR_PRIVATE_GPT_TEST\YourprivateGPT_Testcase.robot">
+<test id="s1-s1-t1" name="Verifying YourprivateGPT" line="5">
+<kw name="Open Browser">
+<msg time="2025-01-06T18:01:40.090954" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2025-01-06T18:01:40.090954" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-01-06T18:01:40.091949" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:40.091949" elapsed="0.000000"/>
+</kw>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.091949" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Location Is">
+<arg>${SUCCESS_URL}</arg>
+<arg>timeout=10s</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:40.092948" elapsed="0.000000"/>
+</kw>
+<kw name="Location Should Be">
+<arg>${SUCCESS_URL}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:40.092948" elapsed="0.000000"/>
+</kw>
+<kw name="Click SIDEMENU20" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.092948" elapsed="0.000000"/>
+</kw>
+<kw name="Click PRIVATEGPT" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.093945" elapsed="0.000000"/>
+</kw>
+<kw name="Location Should Be">
+<arg>https://gene-nextjs-dev.dtskill.com/dashboard/private-gpt</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:40.093945" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Private gpt heading and logo" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.093945" elapsed="0.000000"/>
+</kw>
+<kw name="Verify GenE text &amp; logo presence" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.094954" elapsed="0.000000"/>
+</kw>
+<kw name="Verify ChatContainer" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.094954" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Option in the top right corner of the subpage" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.094954" elapsed="0.000000"/>
+</kw>
+<kw name="Verify all options are clickable" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.095946" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Ask a Question Container" owner="ChatgptAlternate_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.095946" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Right Menu in YourprivateGPT" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.096945" elapsed="0.000000"/>
+</kw>
+<kw name="Upload Directory" owner="YourprivateGPT_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:40.096945" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-01-06T18:01:40.096945" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:40.088949" elapsed="0.008996">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" start="2025-01-06T18:01:39.511929" elapsed="0.586016"/>
+</suite>
+<status status="FAIL" start="2025-01-06T18:01:39.415737" elapsed="0.683209"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="YourprivateGPT Testcase">Suites.YourprivateGPT Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-06T18:01:39.993738" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\YOUR_PRIVATE_GPT_TEST\YourprivateGPT_Testcase.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:40.001751" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:40.039434" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

@@ -1,14 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Negative SignUp Page Testcases                                         
+Suites.Decoding Testcases                                                     
 ==============================================================================
-Checking Negative Cases                                               | PASS |
+Verify Decoding                                                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FINE_TUNED_MODELS\DECODING_TEST\Decoding_Testcases.robot:5
+    T:  Verify Decoding    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FINE_TUNED_MODELS\DECODING_TEST\Decoding_Testcases.robot:6
+      Open Browser    ${URL}    Chrome
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Open Browser' found.
 ------------------------------------------------------------------------------
-Suites.Negative SignUp Page Testcases                                 | PASS |
-1 test, 1 passed, 0 failed
+Suites.Decoding Testcases                                             | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\6\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\6\output.xml

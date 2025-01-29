@@ -1,0 +1,37 @@
+[ ERROR ] Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FINE_TUNED_MODELS\Email_Classification_Testcases.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in <module>
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in <module>
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in <module>
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin
+[ ERROR ] Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in <module>
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in <module>
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in <module>
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin
+[ WARN ] Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.

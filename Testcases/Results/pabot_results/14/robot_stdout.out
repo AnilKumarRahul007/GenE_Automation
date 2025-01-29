@@ -1,14 +1,42 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Department Testcases                                                   
+Suites.Loginpage Testcases                                                    
 ==============================================================================
-Verifying Department                                                  | PASS |
+Verifying Login Page                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot:5
+    T:  Verifying Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot:6
+      Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Loginpage_Keywords.robot:3
+      Open Browser    ${URL}    ${HEADLESS}
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+      |  ${HEADLESS} = headlesschrome (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot:5
+    T:  Verifying Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot:12
+      Close Browser    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.
 ------------------------------------------------------------------------------
-Suites.Department Testcases                                           | PASS |
-1 test, 1 passed, 0 failed
+Suites.Loginpage Testcases                                            | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\14\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\14\output.xml

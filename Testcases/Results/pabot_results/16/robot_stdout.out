@@ -1,0 +1,42 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Negative Login Page TESTCASES                                          
+==============================================================================
+Combined Negative Test Cases for Login Page                             
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Negative_Login_Page_TESTCASES.robot:5
+    T:  Combined Negative Test Cases for Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Negative_Login_Page_TESTCASES.robot:7
+      Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Loginpage_Keywords.robot:3
+      Open Browser    ${URL}    ${HEADLESS}
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+      |  ${HEADLESS} = headlesschrome (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Negative_Login_Page_TESTCASES.robot:5
+    T:  Combined Negative Test Cases for Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\LOGIN_PAGE_TEST\Negative_Login_Page_TESTCASES.robot:29
+      Close Browser    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.
+------------------------------------------------------------------------------
+Suites.Negative Login Page TESTCASES                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\16\output.xml

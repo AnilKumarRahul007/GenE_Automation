@@ -1,10 +1,9 @@
-*** Settings ***
-Resource    ../Settings/settings.robot
-Resource    ../../Keywords/Loginpage_Keywords.robot
-Library      SeleniumLibrary
-Variables    ../Variables/Variables.py
+#*** Settings ***
+#Resource    ../Settings/settings.robot
+#Resource    ../../Keywords/Loginpage_Keywords.robot
+#Library      SeleniumLibrary
+#Variables    ../Variables/Variables.py
 *** Keywords ***
-
 Forgot Password Link
     [Setup]     Login Page
     Click Element    ${FORGOT_PASSWORD_LINK}

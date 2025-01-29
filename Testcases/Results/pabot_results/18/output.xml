@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2025-01-06T18:01:34.359051" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Safe Digging Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CUSTOM_ML_MODELS_TEST\Safe_Digging_Testcases.robot">
+<test id="s1-s1-t1" name="Verify Safe Digging" line="5">
+<kw name="Open Browser">
+<msg time="2025-01-06T18:01:36.674957" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<status status="FAIL" start="2025-01-06T18:01:36.673956" elapsed="0.001001">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-01-06T18:01:36.677958" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.679958" elapsed="0.000995"/>
+</kw>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.682955" elapsed="0.001003"/>
+</kw>
+<kw name="Wait Until Location Is">
+<arg>${SUCCESS_URL}</arg>
+<arg>timeout=20s</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.684957" elapsed="0.000996"/>
+</kw>
+<kw name="Location Should Be">
+<arg>${SUCCESS_URL}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.687958" elapsed="0.000996"/>
+</kw>
+<kw name="Click SIDEMENU13" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.689956" elapsed="0.001003"/>
+</kw>
+<kw name="Click Custom ML Models" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.692953" elapsed="0.001005"/>
+</kw>
+<kw name="Click Safe Digging" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.697959" elapsed="0.002998"/>
+</kw>
+<kw name="Verify Drag and drop or select a PDF to Upload" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.704956" elapsed="0.001002"/>
+</kw>
+<kw name="Verify Select Company" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.710955" elapsed="0.001001"/>
+</kw>
+<kw name="Verify Upload" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.713954" elapsed="0.002003"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>10s</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.716959" elapsed="0.000995"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN1}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.720957" elapsed="0.001025"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN2}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.723981" elapsed="0.002003"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN3}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.727985" elapsed="0.001000"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN4}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.731984" elapsed="0.001002"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN5}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.735983" elapsed="0.000519"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN6}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.738534" elapsed="0.000999"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN7}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.741531" elapsed="0.001998"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN8}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.746529" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN9}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.749533" elapsed="0.002000"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN10}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.755529" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN11}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.758534" elapsed="0.000997"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN12}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.762533" elapsed="0.001000"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN13}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.765528" elapsed="0.001008"/>
+</kw>
+<kw name="Verify Table Column" owner="Custom_ML_Models_SafeDigging_Keywords">
+<arg>${TABLE_PRESENCE}</arg>
+<arg>${EXPECTED_COLUMN14}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.770534" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Left Arrow and Right Arrow and Page Number" owner="Custom_ML_Models_SafeDigging_Keywords">
+<status status="NOT RUN" start="2025-01-06T18:01:36.773535" elapsed="0.000999"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-01-06T18:01:36.776534" elapsed="0.000997"/>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:36.655061" elapsed="0.124471">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" start="2025-01-06T18:01:34.688350" elapsed="2.095182"/>
+</suite>
+<status status="FAIL" start="2025-01-06T18:01:34.508615" elapsed="2.281916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Safe Digging Testcases">Suites.Safe Digging Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-06T18:01:35.874204" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\CUSTOM_ML_MODELS_TEST\Safe_Digging_Testcases.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:35.911196" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:36.162496" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

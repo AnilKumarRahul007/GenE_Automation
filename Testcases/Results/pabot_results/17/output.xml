@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.2 on win32)" generated="2025-01-06T18:01:34.180588" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Negative SignUp Page Testcases" source="C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot">
+<test id="s1-s1-t1" name="Checking Negative Signup Cases" line="5">
+<kw name="Open Sign Up Page" owner="SignUpPage_Keywords" type="SETUP">
+<kw name="Open Browser">
+<msg time="2025-01-06T18:01:36.618929" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2025-01-06T18:01:36.614352" elapsed="0.004577">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-01-06T18:01:36.624953" elapsed="0.001001"/>
+</kw>
+<kw name="Click Element">
+<arg>${SIGN_UP_LINK_LOCATOR}</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.628976" elapsed="0.000979"/>
+</kw>
+<kw name="Wait Until Location Is">
+<arg>${SIGN_UP_PAGE_URL}</arg>
+<arg>timeout=5s</arg>
+<status status="NOT RUN" start="2025-01-06T18:01:36.631951" elapsed="0.001526"/>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:36.578325" elapsed="0.056182">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2025-01-06T18:01:36.660060" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-01-06T18:01:36.659057" elapsed="0.002005">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-01-06T18:01:36.563322" elapsed="0.097740">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<status status="FAIL" start="2025-01-06T18:01:34.501615" elapsed="2.174343"/>
+</suite>
+<status status="FAIL" start="2025-01-06T18:01:34.309774" elapsed="2.371179"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Negative SignUp Page Testcases">Suites.Negative SignUp Page Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-06T18:01:35.796632" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Settings\settings.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-01-06T18:01:36.019288" level="WARN">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Custom_ML_Models_SafeDigging_Keywords.robot' on line 93: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-01-06T18:01:36.545324" level="ERROR">Error in file 'C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\SIGNUP_PAGE_TEST\Negative_SignUp_Page_Testcases.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'selenium.webdriver.common.print_page_options'
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 36, in &lt;module&gt;
+    from SeleniumLibrary.keywords import (
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\__init__.py", line 26, in &lt;module&gt;
+    from .screenshot import ScreenshotKeywords  # noqa
+  File "C:\Python310\lib\site-packages\SeleniumLibrary\keywords\screenshot.py", line 22, in &lt;module&gt;
+    from selenium.webdriver.common.print_page_options import PrintOptions, Orientation
+PYTHONPATH:
+  C:\Python310\Scripts\robot.exe
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages
+  C:\Python310\lib\site-packages\win32
+  C:\Python310\lib\site-packages\win32\lib
+  C:\Python310\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

@@ -1,8 +1,6 @@
 *** Settings ***
-Resource    ../../Settings/settings.robot
-Resource    ../../Keywords/Forgotpassword_Keywords.robot
-Resource    ../../Keywords/Loginpage_Keywords.robot
 Library      SeleniumLibrary
+Resource      ../../Settings/settings.robot
 *** Test Cases ***
 Verify GenE Logo In Forgot Password Page
     [Setup]  Forgot Password Link

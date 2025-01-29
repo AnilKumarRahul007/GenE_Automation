@@ -1,14 +1,45 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.VoiceAssistant Testcases                                               
+Suites.Negative ForgotPassword Testcases                                      
 ==============================================================================
-Verifying VoiceAssistant                                              | PASS |
+Verify GenE Logo In Forgot Password Page                                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot:5
+    T:  Verify GenE Logo In Forgot Password Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot:6
+      Forgot Password Link    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Forgotpassword_Keywords.robot:8
+      Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Keywords\Loginpage_Keywords.robot:3
+      Open Browser    ${URL}    ${HEADLESS}
+      |  ${URL} = https://gene-nextjs-dev.dtskill.com/signin (str)
+      |  ${HEADLESS} = headlesschrome (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot:5
+    T:  Verify GenE Logo In Forgot Password Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\FORGOT_PASSWORD_TEST\Negative_ForgotPassword_Testcases.robot:12
+      Close Browser    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.
 ------------------------------------------------------------------------------
-Suites.VoiceAssistant Testcases                                       | PASS |
-1 test, 1 passed, 0 failed
+Suites.Negative ForgotPassword Testcases                              | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE_Automation\Testcases\Results\pabot_results\15\output.xml
+Output:  C:\Users\ANIL KUMAR RAHUL\PycharmProjects\GenE Automation\GenE_Automation\Testcases\Results\pabot_results\15\output.xml

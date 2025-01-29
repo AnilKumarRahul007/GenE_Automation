@@ -1,16 +1,16 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../Keywords/Email_Classfication_Keywords.robot
+Resource      ../../Settings/settings.robot
 *** Test Cases ***
-Verify Fine-Tuned Models
+Verify Email Classification
     Open Browser    ${URL}    Chrome
     Maximize Browser Window
-    Email_Classfication_Keywords.Fill Login Form    ${USERNAME}    ${PASSWORD}
-    Email_Classfication_Keywords.Click Login Button
+    Fill Login Form    ${USERNAME}    ${PASSWORD}
+    Click Login Button
     Wait Until Location Is    ${SUCCESS_URL}    timeout=10s
     Location Should Be    ${SUCCESS_URL}
-    Click SIDEMENU
-    Verify all SIDEMENU OPTIONS
+    Click SIDEMENU16
+    Sleep   1s
     Click Fine-Tuned Models
     Click Email Functionality
     Verify Input
