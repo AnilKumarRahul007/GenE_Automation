@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+//    triggers {
+//        cron('0 18 * * *')
+//    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def customWorkspace = 'C:\\Users\\ANIL KUMAR RAHUL\\PycharmProjects\\GenE Automation\\GenE_Automation'
+
+                    dir(customWorkspace) {
+                        bat '''
+                        call venv\\Scripts\\activate
+                        cd Testcases
+                        pabot --outputdir Results  LOGIN_PAGE_TEST\\Loginpage_Testcases.robot LOGIN_PAGE_TEST\\Negative_Login_Page_TESTCASES.robot LANDING_PAGE_TEST\\Landingpage_Testcase.robot FORGOT_PASSWORD_TEST\\Forgotpassword_Testcases.robot FORGOT_PASSWORD_TEST\\Negative_ForgotPassword_Testcases.robot SIGNUP_PAGE_TEST\\SignUpPage_Testcase.robot SIGNUP_PAGE_TEST\\Negative_SignUp_Page_Testcases.robot YOUR_PRIVATE_GPT_TEST\\YourprivateGPT_Testcase.robot CHATGPT_ALTERNATE_TEST\\ChatgptAlternate_Testcases.robot CHATGPT_ALTERNATE_TEST\\CHAT_WITH_LOG\\Chatwithlog_Testcases.robot CHATGPT_ALTERNATE_TEST\\CHAT_WITH_CODE\\Chatwithcode_Testcases.robot CHATGPT_ALTERNATE_TEST\\CHAT_WITH_MF4\\ChatwithMF4_Testcases.robot CHATGPT_ALTERNATE_TEST\\CHAT_WITH_SCRIPT\\Chatwithscript_Testcases.robot CHATGPT_ALTERNATE_TEST\\BUFFER_MEMORY\\Buffer_Memory_Testcases.robot CHATGPT_ALTERNATE_TEST\\DEPARTMENT\\Department_Testcases.robot CHATGPT_ALTERNATE_TEST\\VOICE_ASSISTANT\\VoiceAssistant_Testcases.robot CHATGPT_ALTERNATE_TEST\\SUMMARY_BUFFER_TEST\\Summary_Buffer_Testcases.robot CUSTOM_ML_MODELS_TEST\\Safe_Digging_Testcases.robot FINE_TUNED_MODELS\\DECODING_TEST\\Decoding_Testcases.robot FINE_TUNED_MODELS\\ESB_NOTES_ACTION_TAGGING_TEST\\ESB_Notes_Action_Tagging_Testcases.robot FINE_TUNED_MODELS\\Email_Classification_Testcases.robot AI_AGENTS_TEST\\EMAIL_EXTRACTION_TEST\\Email_Extraction_Testcases.robot AI_AGENTS_TEST\\HANDWRITTEN_OCR_TEST\\Handwritten_OCR_Testcases.robot AI_AGENTS_TEST\\SAI-SCRIPT_DISTRO_TEST\\Sai-Script_Distro_Testcases.robot AI_AGENTS_TEST\\SALESFORCE_KB_EXPLORER_TEST\\Salesforce_KB_Explorer_Testcases.robot
+                        '''
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                def customWorkspace = 'C:\\Users\\ANIL KUMAR RAHUL\\PycharmProjects\\GenE Automation\\GenE_Automation'
+
+                dir(customWorkspace) {
+                    // Archive the report as a build artifact
+                    archiveArtifacts artifacts: 'Testcases/Results/report.html', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'Testcases/Results/log.html', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'Testcases/Results/*-selenium-screenshot-*.png', allowEmptyArchive: true
+
+                    // Send email with the report attached
+                    emailext (
+                        to: 'qateam@dtskill.com',
+                        subject: 'Test Report',
+                        body: 'Please find the test report attached.',
+                        attachmentsPattern: 'Testcases/Results/report.html,Testcases/Results/log.html,Testcases/Results/*-selenium-screenshot-*.png'
+                    )
+                }
+            }
+        }
+    }
+}
